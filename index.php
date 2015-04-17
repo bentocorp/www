@@ -10,8 +10,8 @@
 
     <!-- <link rel="icon" type="image/png" href="favicon.png"> -->
     <link rel="stylesheet" href="//d3q6uu7asevdsg.cloudfront.net/1.2/css/link_texting.min.css">
-    <link rel="stylesheet" href="/site/css/bootstrap.css">
-    <link rel="stylesheet" href="/site/css/main.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/main.css">
     <link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,700,600,400' rel='stylesheet' type='text/css'>
 
     <!-- Facebook Conversion Code for Key Page Views - Bento Ad Account 1 -->
@@ -51,7 +51,7 @@
         <div class="hero hero-home">
             <div class="container">
                 <div class="hero-left">
-                    <img src="/site/img/bento-logo.png" alt="Bento Logo" class="logo">
+                    <img src="/img/bento-logo.png" alt="Bento Logo" class="logo">
                     <h1>Delicious Asian food delivered in minutes. <br/>
                     Build your Bento for only $12.
                     </h1>
@@ -75,7 +75,7 @@
                 </div>
                 <div class="hero-right">
                     <div class="bento-screenshots">
-                        <img src="/site/img/bento-screenshots.png" alt="Screenshots of Bento iPhone App">
+                        <img src="/img/bento-screenshots.png" alt="Screenshots of Bento iPhone App">
                     </div>
                 </div>
             </div>
@@ -106,22 +106,22 @@
 
     <section class="photos">
         <div class="photo photo-large">
-            <img src="/site/img/photo-large-1.jpg" alt="Photo of Bento Box">
+            <img src="/img/photo-large-1.jpg" alt="Photo of Bento Box">
         </div>
         <div class="photo photo-large">
-            <img src="/site/img/photo-large-2.jpg" alt="Bento Mongolian Beef">
+            <img src="/img/photo-large-2.jpg" alt="Bento Mongolian Beef">
         </div>
         <div class="photo photo-small">
-            <img src="/site/img/photo-small-1.jpg" alt="Photo of Bento">
+            <img src="/img/photo-small-1.jpg" alt="Photo of Bento">
         </div>
         <div class="photo photo-small">
-            <img src="/site/img/photo-small-2.jpg" alt="Photo of Bento">
+            <img src="/img/photo-small-2.jpg" alt="Photo of Bento">
         </div>
         <div class="photo photo-small">
-            <img src="/site/img/photo-small-3.jpg" alt="Photo of Bento">
+            <img src="/img/photo-small-3.jpg" alt="Photo of Bento">
         </div>
         <div class="photo photo-small">
-            <img src="/site/img/photo-small-4.jpg" alt="Photo of Bento">
+            <img src="/img/photo-small-4.jpg" alt="Photo of Bento">
         </div>
     </section>
 
@@ -129,11 +129,11 @@
         <div class="footer-top">
             <div class="container">
                 <div class="logo">
-                    <img src="/site/img/bento-logo.png" alt="Bento Logo" class="logo">
+                    <img src="/img/bento-logo.png" alt="Bento Logo" class="logo">
                 </div>
                 <div class="links">
                     <a href="https://itunes.apple.com/us/app/bento-asian-food-delivered/id963634117?ls=1&mt=8">
-                        <img src="/site/img/app-store-button.png" alt="Download from App Store" class="app-button">
+                        <img src="/img/app-store-button.png" alt="Download from App Store" class="app-button">
                     </a>
                 </div>
             </div>
@@ -154,9 +154,9 @@
 
 
     <script src="//bootstrapformhelpers.com/assets/js/jquery-1.10.2.min.js"></script>
-    <!-- <script src="/site/js/bootstrap.min.js"></script> -->
+    <!-- <script src="/js/bootstrap.min.js"></script> -->
     <!-- <script type="text/javascript" src="//d3q6uu7asevdsg.cloudfront.net/1.2/js/link_texting.min.js"></script> -->
-    <script src="/site/js/bootstrap-formhelpers.js"></script>
+    <script src="/js/bootstrap-formhelpers.js"></script>
 
     <div id="fb-root"></div>
     

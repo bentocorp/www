@@ -6407,6 +6407,11 @@ a:hover {
     margin-right: auto;
   }
 }
+@media (max-width: 500px) {
+  .newsletter .newsletter-menusubscribe {
+    max-width: 80%;
+  }
+}
 .newsletter label {
   display: inline-block;
   margin-left: 7px;

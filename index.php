@@ -10,8 +10,8 @@
 
     <!-- <link rel="icon" type="image/png" href="favicon.png"> -->
     <link rel="stylesheet" href="//d3q6uu7asevdsg.cloudfront.net/1.2/css/link_texting.min.css">
-    <link rel="stylesheet" href="/css/bootstrap.css">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/main.css">
     <link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,700,600,400' rel='stylesheet' type='text/css'>
 
     <!-- Facebook Conversion Code for Key Page Views - Bento Ad Account 1 -->
@@ -45,13 +45,17 @@
                         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
                     </li>
                     <li class="facebook"><div class="fb-like" data-href="https://www.facebook.com/mybentonow/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div></li>
+                    <li class="instagram">
+                        <a href="http://instagram.com/mybentonow?ref=badge" class="ig-b- ig-b-v-24" target="_blank"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a>
+                    </li>
+
                 </ul>
             </div>
         </nav>
         <div class="hero hero-home">
             <div class="container">
                 <div class="hero-left">
-                    <img src="/img/bento-logo.png" alt="Bento Logo" class="logo">
+                    <img src="./img/bento-logo.png" alt="Bento Logo" class="logo">
                     <h1>Delicious Asian food delivered in minutes. <br/>
                     Build your Bento for only $12.
                     </h1>
@@ -75,7 +79,7 @@
                 </div>
                 <div class="hero-right">
                     <div class="bento-screenshots">
-                        <img src="/img/bento-screenshots.png" alt="Screenshots of Bento iPhone App">
+                        <img src="./img/bento-screenshots.png" alt="Screenshots of Bento iPhone App">
                     </div>
                 </div>
             </div>
@@ -106,22 +110,62 @@
 
     <section class="photos">
         <div class="photo photo-large">
-            <img src="/img/photo-large-1.jpg" alt="Photo of Bento Box">
+            <img src="./img/photo-large-1.jpg" alt="Photo of Bento Box">
         </div>
         <div class="photo photo-large">
-            <img src="/img/photo-large-2.jpg" alt="Bento Mongolian Beef">
+            <img src="./img/photo-large-2.jpg" alt="Bento Mongolian Beef">
         </div>
         <div class="photo photo-small">
-            <img src="/img/photo-small-1.jpg" alt="Photo of Bento">
+            <img src="./img/photo-small-1.jpg" alt="Photo of Bento">
         </div>
         <div class="photo photo-small">
-            <img src="/img/photo-small-2.jpg" alt="Photo of Bento">
+            <img src="./img/photo-small-2.jpg" alt="Photo of Bento">
         </div>
         <div class="photo photo-small">
-            <img src="/img/photo-small-3.jpg" alt="Photo of Bento">
+            <img src="./img/photo-small-3.jpg" alt="Photo of Bento">
         </div>
         <div class="photo photo-small">
-            <img src="/img/photo-small-4.jpg" alt="Photo of Bento">
+            <img src="./img/photo-small-4.jpg" alt="Photo of Bento">
+        </div>
+    </section>
+    <section class="delivery">
+        <div class="delivery-map"></div>
+    </section>
+     <section class="newsletter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 center">
+                    <div class="newsletter-text">
+                        <h2>Waiting for Android or want us to come to your city? Subscribe to our newsletter and we’ll let you know when we launch!</h2>
+                    </div>
+
+                </div>
+            </div>
+            <div class="center-block">
+                
+                <div class="col-md-5 col-md-offset-4 center">
+                    <div id="mc_embed_signup">
+                        <form action="//bentonow.us10.list-manage.com/subscribe/post?u=5d6c169bca0e5658fc47ead8b&amp;id=aea46e8ab8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                            <div id="mc_embed_signup_scroll">
+                           
+                                <div class="newsletter-email ">
+                                  <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Enter your email..."><input type="submit" name="subscribe" id="mc-embedded-subscribe" text="Subscribe" />
+                                </div>
+                                <div class="newsletter-menusubscribe">
+                                   <span> <input type="checkbox" value="1" name="group[1425][1]" id="mce-group[1425]-1425-0"/></span><label for="menusubscribe">Also subscribe to the daily menu newsletter to see what we’re cookin’ today!</label> 
+                                </div>
+                                </div>
+                                <div id="mce-responses" class="clear">
+                                    <div class="response" id="mce-error-response" style="display:none"></div>
+                                    <div class="response" id="mce-success-response" style="display:none"></div>
+                                </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                <div style="position: absolute; left: -5000px;"><input type="text" name="b_5d6c169bca0e5658fc47ead8b_aea46e8ab8" tabindex="-1" value=""></div>
+                               
+                            </div>
+                        </form>
+                     </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -129,11 +173,11 @@
         <div class="footer-top">
             <div class="container">
                 <div class="logo">
-                    <img src="/img/bento-logo.png" alt="Bento Logo" class="logo">
+                    <img src="./img/bento-logo.png" alt="Bento Logo" class="logo">
                 </div>
                 <div class="links">
                     <a href="https://itunes.apple.com/us/app/bento-asian-food-delivered/id963634117?ls=1&mt=8">
-                        <img src="/img/app-store-button.png" alt="Download from App Store" class="app-button">
+                        <img src="./img/app-store-button.png" alt="Download from App Store" class="app-button">
                     </a>
                 </div>
             </div>
@@ -156,7 +200,7 @@
     <script src="//bootstrapformhelpers.com/assets/js/jquery-1.10.2.min.js"></script>
     <!-- <script src="/js/bootstrap.min.js"></script> -->
     <!-- <script type="text/javascript" src="//d3q6uu7asevdsg.cloudfront.net/1.2/js/link_texting.min.js"></script> -->
-    <script src="/js/bootstrap-formhelpers.js"></script>
+    <script src="./js/bootstrap-formhelpers.js"></script>
 
     <div id="fb-root"></div>
     

@@ -15,7 +15,7 @@ set :branch, 'dev'
 require './config/myconfig.rb'
 
 
-
+=begin
 namespace :deploy do
 
   #desc 'Restart Dev Application'
@@ -28,7 +28,7 @@ namespace :deploy do
     #end
   #end
 
-=begin
+
   desc 'Get stuff ready prior to symlinking'
   task :compile_assets do
     on roles(:app), in: :sequence, wait: 1 do

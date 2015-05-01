@@ -15,10 +15,9 @@ set :branch, 'master'
 require './config/myconfig.rb'
 
 
-
+=begin
 namespace :deploy do
 
-=begin
   desc 'Get stuff ready prior to symlinking'
   task :compile_assets do
     on roles(:app), in: :sequence, wait: 1 do

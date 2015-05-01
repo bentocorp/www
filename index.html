@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Bento — Delicious Asian food, in minutes, on-demand</title>
     <meta name="description" content="Bento — Delicious Asian food, in minutes, on-demand">
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
     <!-- <link rel="icon" type="image/png" href="favicon.png"> -->
     <link rel="stylesheet" href="//d3q6uu7asevdsg.cloudfront.net/1.2/css/link_texting.min.css">
-    <link rel="stylesheet" href="/css/bootstrap.css">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!--link rel="stylesheet" href="/css/main.css"-->
     <link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,700,600,400' rel='stylesheet' type='text/css'>
-
+    <link rel="shortcut icon" href="favicon.ico?v=1" />
     <!-- Facebook Conversion Code for Key Page Views - Bento Ad Account 1 -->
     <script>(function() {
       var _fbq = window._fbq || (window._fbq = []);
@@ -31,6 +31,7 @@
     </script>
     <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6026847103468&amp;cd[value]=0.00&amp;cd[currency]=USD&amp;noscript=1" /></noscript>
 
+
 </head>
 
 <body>
@@ -38,13 +39,17 @@
         <nav class="navbar navbar-default navbar-home">
             <div class="container">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="https://itunes.apple.com/us/app/bento-asian-food-delivered/id963634117?ls=1&mt=8">Download Now</a></li>
+                    <li class="active navlink"><a href="#">Home</a></li>
+                    <li class="navlink"><a href="https://itunes.apple.com/us/app/bento-asian-food-delivered/id963634117?ls=1&mt=8">Download Now</a></li>
                     <li class="twitter">
                         <a href="https://twitter.com/bento" class="twitter-follow-button" data-show-count="false">Follow @bento</a>
                         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
                     </li>
                     <li class="facebook"><div class="fb-like" data-href="https://www.facebook.com/mybentonow/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div></li>
+                    <li class="instagram">
+                        <a href="http://instagram.com/mybentonow?ref=badge" class="ig-b- ig-b-v-24" target="_blank"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a>
+                    </li>
+
                 </ul>
             </div>
         </nav>
@@ -124,6 +129,55 @@
             <img src="/img/photo-small-4.jpg" alt="Photo of Bento">
         </div>
     </section>
+    <section class="delivery">
+        <div class="delivery-bar">
+            <div class="delivery-bar-content"> 
+                <div class="delivery-car"></div><div class="delivery-text">Now delivering to...</div></div>
+            </div>
+        <div class="delivery-map" id="delivery-map">
+        <iframe width='100%' height='100%' frameBorder='0' src='https://a.tiles.mapbox.com/v4/vincent-bentonow-com.m26hh48o/attribution,zoompan,zoomwheel,geocoder,share.html?access_token=pk.eyJ1IjoidmluY2VudC1iZW50b25vdy1jb20iLCJhIjoiV0p2al9qNCJ9.cKufaBUS30xSk7wXxmGuDg'></iframe>
+            <!--iframe src="https://www.google.com/maps/d/embed?mid=zWUXnQ2nSnXg.klwLYVNEU090" width="100%" height="520"></iframe-->
+        </div>
+    </section>
+     <section class="newsletter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 center">
+                    <div class="newsletter-text">
+                        <h2>Waiting for Android or want us to come to your city? Subscribe to our newsletter and we’ll let you know when we launch!</h2>
+                    </div>
+
+                </div>
+            </div>
+            <div class="center-block">
+                
+                <div class="col-md-5 col-md-offset-4 center">
+                    <div id="mc_embed_signup">
+                        <form action="//bentonow.us10.list-manage.com/subscribe/post?u=5d6c169bca0e5658fc47ead8b&amp;id=aea46e8ab8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                            <div id="mc_embed_signup_scroll">
+                           
+                                <div class="newsletter-email ">
+                                  <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Enter your email..." required="required"><input type="submit" name="subscribe" id="mc-embedded-subscribe" text="Subscribe" />
+                                </div>
+                                <div id="mce-email-error" class="error"></div>
+                            
+                                <div class="newsletter-menusubscribe">
+                                   <span> <input type="checkbox" value="1" name="group[1425][1]" id="mce-group[1425]-1425-0"/></span><label for="menusubscribe">Also subscribe to the daily menu newsletter to see what we’re cookin’ today!</label> 
+                                </div>
+                            </div>
+                            
+                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div style="position: absolute; left: -5000px;"><input type="text" name="b_5d6c169bca0e5658fc47ead8b_aea46e8ab8" tabindex="-1" value=""></div>
+
+                        </form>       
+                    </div>
+                                    
+                </div>  
+                        
+            </div>
+        </div>
+        
+    </section>
 
     <footer class="footer">
         <div class="footer-top">
@@ -132,9 +186,21 @@
                     <img src="/img/bento-logo.png" alt="Bento Logo" class="logo">
                 </div>
                 <div class="links">
-                    <a href="https://itunes.apple.com/us/app/bento-asian-food-delivered/id963634117?ls=1&mt=8">
-                        <img src="/img/app-store-button.png" alt="Download from App Store" class="app-button">
-                    </a>
+                    <ul>
+                        <li class="twitter">
+                            <a href="https://twitter.com/bento" class="twitter-follow-button" data-show-count="false">Follow @bento</a>
+                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                        </li>
+                        <li class="facebook"><div class="fb-like" data-href="https://www.facebook.com/mybentonow/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div></li>
+                        <li class="instagram">
+                            <a href="http://instagram.com/mybentonow?ref=badge" class="ig-b- ig-b-v-24" target="_blank"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a>
+                        </li>
+                        <li>
+                            <a href="https://itunes.apple.com/us/app/bento-asian-food-delivered/id963634117?ls=1&mt=8">
+                                <img src="/img/app-store-button.png" alt="Download from App Store" class="app-button">
+                            </a>
+                        </li>    
+                    </ul>
                 </div>
             </div>
         </div>
@@ -154,9 +220,11 @@
 
 
     <script src="//bootstrapformhelpers.com/assets/js/jquery-1.10.2.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
     <!-- <script src="/js/bootstrap.min.js"></script> -->
     <!-- <script type="text/javascript" src="//d3q6uu7asevdsg.cloudfront.net/1.2/js/link_texting.min.js"></script> -->
     <script src="/js/bootstrap-formhelpers.js"></script>
+    <script src="/js/main.js"></script>
 
     <div id="fb-root"></div>
     
@@ -171,13 +239,14 @@
     
     <!-- Google Analytics -->
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     /* (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
       ga('create', 'UA-61640336-1', 'auto');
       ga('send', 'pageview');
+      */
     </script>
     
 </body>

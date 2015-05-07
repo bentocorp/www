@@ -44,9 +44,8 @@ namespace :ops do
       execute "cp #{deploy_to}/../components/.env.php #{release_path}"
     end
   end
-  =end
-
+ 
 end
-
+=end
 
 

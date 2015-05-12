@@ -1,19 +1,3 @@
-$(document).ready(function() {
-
-
-	$('#mc-embedded-subscribe-form').validate({
-	  	errorPlacement: function(error, element) {
-	     	error.appendTo('#mce-email-error');
-	   	},
-	   	submitHandler : function(form) {
-		    form.submit();
-		}
-	});
-
-	setupMap();
-
-});
-
 
    
 //facebook
@@ -67,3 +51,25 @@ function setupMap(){
 	//if (map.tap) map.tap.disable();
 
 }
+
+$(document).ready(function() {
+
+	/*
+	var emailform = $('#mc-embedded-subscribe-form');
+	if(emailform.length && typeof emailform.validateForm == 'function'){
+		emailform.validateForm({
+		  	errorPlacement: function(error, element) {
+		     	error.appendTo('#mce-email-error');
+		   	},
+		   	submitHandler : function(form) {
+			    form.submit();
+			}
+		});
+	}else{
+		//console.error('no validate');
+
+	}
+	*/
+	setupMap();
+
+});

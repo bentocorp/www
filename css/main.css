@@ -1,4 +1,11 @@
 
-.navlink{
-	padding: 1px 0;color: #fff;text-transform: uppercase;letter-spacing: .2em;  font-weight: 600;font-size: 12px;
+@media (max-width: 500px) {
+	.navbar-home .navbar-nav li{
+		margin: 0 5px;
+	}
+	.hero-home .hero-left .app-store-btn .btn-download{
+		padding: 10px 15px;
+		font-size: 14px;
+	}
+
 }

@@ -1,7 +1,4 @@
 
-@media (max-width: 992px) {
-	.navbar-home .navbar-nav li.twitter {
-	    /*margin-right: 40px;*/
-	}
-	
-
+.navlink{
+	padding: 1px 0;color: #fff;text-transform: uppercase;letter-spacing: .2em;  font-weight: 600;font-size: 12px;
+}

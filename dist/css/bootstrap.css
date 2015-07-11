@@ -397,7 +397,7 @@ h6 .small,
 .h6 .small {
   font-weight: normal;
   line-height: 1;
-  color: #898c8e;
+  color: #999999;
 }
 h1,
 .h1,
@@ -517,7 +517,7 @@ mark,
   text-transform: capitalize;
 }
 .text-muted {
-  color: #898c8e;
+  color: #999999;
 }
 .text-primary {
   color: #428bca;
@@ -651,7 +651,7 @@ dd {
 abbr[title],
 abbr[data-original-title] {
   cursor: help;
-  border-bottom: 1px dotted #898c8e;
+  border-bottom: 1px dotted #999999;
 }
 .initialism {
   font-size: 90%;
@@ -674,7 +674,7 @@ blockquote .small {
   display: block;
   font-size: 80%;
   line-height: 1.42857143;
-  color: #898c8e;
+  color: #999999;
 }
 blockquote footer:before,
 blockquote small:before,
@@ -1435,7 +1435,7 @@ table {
 caption {
   padding-top: 8px;
   padding-bottom: 8px;
-  color: #898c8e;
+  color: #999999;
   text-align: left;
 }
 th {
@@ -1726,7 +1726,7 @@ output {
   padding-top: 7px;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #565859;
+  color: #555555;
 }
 .form-control {
   display: block;
@@ -1735,7 +1735,7 @@ output {
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #565859;
+  color: #555555;
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #cccccc;
@@ -2660,7 +2660,7 @@ fieldset[disabled] .btn-link {
 fieldset[disabled] .btn-link:hover,
 .btn-link[disabled]:focus,
 fieldset[disabled] .btn-link:focus {
-  color: #898c8e;
+  color: #999999;
   text-decoration: none;
 }
 .btn-lg,
@@ -2949,7 +2949,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   font-size: 14px;
   font-weight: normal;
   line-height: 1;
-  color: #565859;
+  color: #555555;
   text-align: center;
   background-color: #cccccc;
   border: 1px solid #cccccc;
@@ -3113,7 +3113,7 @@ button.list-group-item {
 .list-group-item.disabled:hover,
 .list-group-item.disabled:focus {
   background-color: #cccccc;
-  color: #898c8e;
+  color: #999999;
   cursor: not-allowed;
 }
 .list-group-item.disabled .list-group-item-heading,
@@ -3124,7 +3124,7 @@ button.list-group-item {
 .list-group-item.disabled .list-group-item-text,
 .list-group-item.disabled:hover .list-group-item-text,
 .list-group-item.disabled:focus .list-group-item-text {
-  color: #898c8e;
+  color: #999999;
 }
 .list-group-item.active,
 .list-group-item.active:hover,
@@ -5118,14 +5118,14 @@ button.list-group-item-danger.active:focus {
   padding: 3px 20px;
   font-size: 12px;
   line-height: 1.42857143;
-  color: #898c8e;
+  color: #999999;
 }
 .bfh-selectbox .bfh-selectbox-options ul .disabled > a {
-  color: #898c8e;
+  color: #999999;
 }
 .bfh-selectbox .bfh-selectbox-options ul .disabled > a:hover,
 .bfh-selectbox .bfh-selectbox-options ul .disabled > a:focus {
-  color: #898c8e;
+  color: #999999;
   text-decoration: none;
   background-color: transparent;
   background-image: none;
@@ -5222,7 +5222,7 @@ button.list-group-item-danger.active:focus {
   background-color: #428bca;
 }
 .bfh-datepicker-calendar > table.calendar > tbody > tr > td.off {
-  color: #898c8e;
+  color: #999999;
 }
 .bfh-datepicker-calendar > table.calendar > tbody > tr > td:not(.off):hover {
   cursor: pointer;
@@ -5327,10 +5327,10 @@ button.list-group-item-danger.active:focus {
   margin-left: -15px;
 }
 .bfh-slider > .bfh-slider-handle > .bfh-slider-value .disabled {
-  color: #898c8e;
+  color: #999999;
 }
 .bfh-slider.disabled .bfh-slider-value {
-  color: #898c8e;
+  color: #999999;
 }
 .bfh-colorpicker-popover {
   position: absolute;
@@ -5609,7 +5609,7 @@ a:hover {
 }
 .hero-home input {
   padding: 21px 12px;
-  color: #898c8e;
+  color: #999999;
   font-size: 16px;
   border: none;
   border-right: 1px solid #95ca61;
@@ -5640,7 +5640,7 @@ a:hover {
 }
 .hero-home button:hover {
   background: #fff;
-  color: #565859;
+  color: #555555;
 }
 .linkTextingInner_oq3j39q0 {
   display: block;
@@ -5687,11 +5687,11 @@ a:hover {
 }
 .steps-list .step h1 {
   font-size: 21px;
-  color: #565859;
+  color: #555555;
 }
 .steps-list .step p {
   font-size: 16px;
-  color: #898c8e;
+  color: #999999;
 }
 .photos {
   margin-top: 100px;
@@ -5850,7 +5850,7 @@ a:hover {
   }
 }
 .newsletter {
-  color: #898c8e;
+  color: #999999;
   margin: 50px 0;
   font-size: 15px;
 }
@@ -5875,7 +5875,7 @@ a:hover {
 .newsletter .newsletter-email input[type=email] {
   width: 300px;
   border: none;
-  color: #565859;
+  color: #555555;
   outline: none;
   padding: 10px 10px;
 }

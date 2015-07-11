@@ -289,7 +289,7 @@ a {
 a:hover,
 a:focus {
   color: #2a6496;
-  text-decoration: underline;
+  text-decoration: none;
 }
 a:focus {
   outline: thin dotted;
@@ -2653,7 +2653,7 @@ fieldset[disabled] .btn-link {
 .btn-link:hover,
 .btn-link:focus {
   color: #2a6496;
-  text-decoration: underline;
+  text-decoration: none;
   background-color: transparent;
 }
 .btn-link[disabled]:hover,
@@ -5377,9 +5377,6 @@ button.list-group-item-danger.active:focus {
 }
 .input-group > .bfh-number-btn:hover {
   background-color: #cccccc;
-}
-a:hover {
-  text-decoration: none !important;
 }
 .medialinks {
   display: inline-block;

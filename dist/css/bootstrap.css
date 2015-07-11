@@ -5980,6 +5980,15 @@ button.list-group-item-danger.active:focus {
   font-size: 90%;
   color: red;
 }
+@media (max-width: 500px) {
+  .navbar-home .navbar-nav li {
+    margin: 0 5px;
+  }
+  .hero-home .hero-left .app-store-btn .btn-download {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
 .linkTextingInner_oq3j39q0 {
   display: block;
   width: auto;

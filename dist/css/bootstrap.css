@@ -5921,7 +5921,7 @@ button.list-group-item-danger.active:focus {
 }
 .navbar-home.in {
   top: 0;
-  background-color: #95ca61;
+  background-color: #78a74b;
   -webkit-transition: top .5s ease-out;
        -o-transition: top .5s ease-out;
           transition: top .5s ease-out;
@@ -6350,7 +6350,7 @@ button.list-group-item-danger.active:focus {
 }
 .delivery .delivery-bar {
   position: relative;
-  z-index: 99999;
+  z-index: 100;
   width: 100%;
   height: 43px;
   text-align: center;

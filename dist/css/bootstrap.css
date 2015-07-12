@@ -6050,6 +6050,7 @@ button.list-group-item-danger.active:focus {
   }
 }
 .logo {
+  width: 100%;
   max-width: 342px;
 }
 .page-hero {

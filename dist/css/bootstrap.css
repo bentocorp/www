@@ -5914,9 +5914,17 @@ button.list-group-item-danger.active:focus {
   border-color: #fff;
 }
 .navbar-home {
-  padding-top: 10px;
-  background: none;
-  border: none;
+  top: -100px;
+}
+.navbar-home.navbar-static {
+  padding-top: 110px;
+}
+.navbar-home.in {
+  top: 0;
+  background-color: #95ca61;
+  -webkit-transition: top .5s ease-out;
+       -o-transition: top .5s ease-out;
+          transition: top .5s ease-out;
 }
 .navbar-home .navbar-nav {
   padding: 0;
@@ -6050,7 +6058,7 @@ button.list-group-item-danger.active:focus {
           background-size: cover;
 }
 .hero-home {
-  padding: 100px 0 100px;
+  padding: 0 0 100px;
 }
 @media (max-width: 992px) {
   .hero-home {

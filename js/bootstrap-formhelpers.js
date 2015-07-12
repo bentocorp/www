@@ -1,3 +1,4 @@
+/* jshint ignore:start */
 /**
 * bootstrap-formhelpers.js v2.3.0 by @vincentlamanna
 * Copyright 2013 Vincent Lamanna
@@ -17920,3 +17921,4 @@ var BFHTimezonesList = {
   });
 
 }(window.jQuery);
+/* jshint ignore:end */

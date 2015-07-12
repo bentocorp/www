@@ -68,23 +68,25 @@
   }
 }
 
-@animation-offset: 100px;
+@nav-amination-offset: 100px;
 
 .navbar-home {
-  // TODO relative / fixed versions
-  //padding-top: 10px;
-
-  top: -@animation-offset;
-  //margin-bottom: -@animation-offset;
+  top: -@nav-amination-offset;
 
   &.navbar-static {
-    padding-top: (@animation-offset + 10); // 10px padding
+    padding-top: (@nav-amination-offset + 10); // 10px padding
   }
   
   &.in {
     background-color: @green-dark;
     top: 0;
     transition: top 0.5s ease-out;    
+  }
+
+  & > .container {
+    // navbarHeader.offsetWidth
+    transform: translate(-181px, 0px);
+    transition: 1s transform ease-out;
   }
 
   .navbar-nav{
@@ -96,6 +98,24 @@
       .medialinks;
     }
   }
+
+  // nav logo
+  .navbar-header {
+    & > a.navbar-brand {
+      opacity: 0;
+      transition: 1s opacity ease-out;
+      & > img.logo {
+        height: 100%;
+        width: inherit;
+      }
+    }
+  }
+  
+  .navbar-right {
+    transform: translate(181px, 0px);
+    transition: 1s transform ease-out;
+  }
+
 }
 
 .footer-top {
@@ -133,7 +153,7 @@
 }
 
 .hero-home {
-  padding: (100 - @animation-offset) 0 100px;
+  padding: (100 - @nav-amination-offset) 0 100px;
 
   @media (max-width: 992px) {
     padding: 25px 0 0;

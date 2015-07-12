@@ -99,6 +99,7 @@ var Bento = (function () {
   // returns true/false
   // elem: dom element e.g. returned by document.getElementById
   isInViewport = function(elem) {
+    if(!elem) throw "isInViewport: elem is undefined";
     var distance = elem.getBoundingClientRect();
     return (
       distance.top >= 0 &&
@@ -107,6 +108,10 @@ var Bento = (function () {
       distance.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
   };
+
+  // TODO pass in config vars - remove hardcoded: 
+  // sticky-controls, sticky-controls-placeholder, .her.hero-home .logo
+  // TODO throw error if sticky-controls selector returns anything other than 1 element
 
   /* enable sticky footer controls - use id="sticky-controls" */
   stickyControls = function(){
@@ -119,18 +124,40 @@ var Bento = (function () {
       placeholder = document.createElement("DIV");
       placeholder.id = "sticky-controls-placeholder";
       controls.parentElement.insertBefore(placeholder, controls.nextSibling);
-      //  controls.parentElement.insertBefore(placeholder, controls);
     }
     placeholder.style.clear = "both";
 
     /* jshint debug: true */
     //debugger;
-    console.log(isInViewport(placeholder));
+
+    var logo = document.querySelector('.hero.hero-home .logo');
+    var navbarHeader = document.querySelector('.navbar-header');
+    var navbarBrand = document.querySelector('.navbar-header .navbar-brand');
+    var navbarRight = document.querySelector('.navbar-right');
+    //navbarHeader.offsetWidth;
 
     // fix controls if placeholder (original controls location) is not in viewport
     fixControls = function(){
       if(!placeholder || !controls) return;
       var st = window.pageYOffset || document.documentElement.scrollTop;
+
+      if(isInViewport(logo)){
+        navbarHeader.parentElement.style.transform = "translate(-" + navbarHeader.offsetWidth + "px, 0px)";
+        navbarRight.style.transform = "translate(" + navbarHeader.offsetWidth + "px, 0px)";
+        //navbarHeader.parentElement.style.width = (navbarHeader.parentElement.offsetWidth + navbarHeader.offsetWidth) + "px";
+        navbarBrand.style.opacity = "0";
+        setTimeout(function(){
+          navbarBrand.style.visibility = "hidden";
+        },1000);
+      } else {
+        //navbarHeader.parentElement.style.width = "";
+        navbarHeader.parentElement.style.transform = "translate(0px, 0px)";
+        navbarRight.style.transform = "translate(0px, 0px)";
+        navbarBrand.style.opacity = "1";
+        navbarBrand.style.visibility = "visible";
+      }
+
+      
       if(isInViewport(placeholder)) {
         controls.classList.remove('navbar-fixed-top');
         controls.classList.remove('in');
@@ -138,10 +165,9 @@ var Bento = (function () {
         placeholder.style.height = "0";
       } else {
         controls.classList.remove('navbar-static');
-        // offsetHeight = 50
-        // 115?
-        placeholder.style.height = (controls.offsetHeight + 115) + "px";
-        //placeholder.style.height = controls.offsetHeight + "px";
+        // magic number to keep the page from "jumping"
+        // when transitioning between static and fixed
+        placeholder.style.height = "170px";
         controls.classList.add('navbar-fixed-top');
         
         if (st > lastScrollTop) {

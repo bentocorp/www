@@ -3071,7 +3071,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-brand {
   float: left;
   height: 44px;
-  padding: 12px 15px;
+  padding: 7px 40px 7px 15px;
   font-size: 18px;
   line-height: 20px;
 }
@@ -5926,6 +5926,15 @@ button.list-group-item-danger.active:focus {
        -o-transition: top .5s ease-out;
           transition: top .5s ease-out;
 }
+.navbar-home > .container {
+  -webkit-transition: 1s -webkit-transform ease-out;
+       -o-transition: 1s -o-transform ease-out;
+          transition: 1s transform ease-out;
+  -webkit-transform: translate(-181px, 0px);
+      -ms-transform: translate(-181px, 0px);
+       -o-transform: translate(-181px, 0px);
+          transform: translate(-181px, 0px);
+}
 .navbar-home .navbar-nav {
   padding: 0;
   margin: 0;
@@ -5981,6 +5990,25 @@ button.list-group-item-danger.active:focus {
   color: #fff;
   background: none;
   border-color: #fff;
+}
+.navbar-home .navbar-header > a.navbar-brand {
+  opacity: 0;
+  -webkit-transition: 1s opacity ease-out;
+       -o-transition: 1s opacity ease-out;
+          transition: 1s opacity ease-out;
+}
+.navbar-home .navbar-header > a.navbar-brand > img.logo {
+  width: inherit;
+  height: 100%;
+}
+.navbar-home .navbar-right {
+  -webkit-transition: 1s -webkit-transform ease-out;
+       -o-transition: 1s -o-transform ease-out;
+          transition: 1s transform ease-out;
+  -webkit-transform: translate(181px, 0px);
+      -ms-transform: translate(181px, 0px);
+       -o-transform: translate(181px, 0px);
+          transform: translate(181px, 0px);
 }
 .footer-top .links {
   padding: 0;

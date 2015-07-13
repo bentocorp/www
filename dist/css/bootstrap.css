@@ -6260,6 +6260,7 @@ button.list-group-item-danger.active:focus {
 }
 .steps-list .step p {
   font-size: 16px;
+  line-height: 1.8em;
   color: #999;
 }
 .photos {

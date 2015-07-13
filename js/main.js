@@ -124,7 +124,8 @@ var Bento = (function () {
       var st = window.pageYOffset || document.documentElement.scrollTop;
 
       if(isInViewport(logo)){
-        navbarHeader.parentElement.style.transform = "translate(-" + navbarHeader.offsetWidth + "px, 0px)";
+        // navbarHeader.offsetWidth has unexpected behavior for small screens
+        navbarHeader.parentElement.style.transform = "translate(-181px, 0px)";
         navbarRight.style.transform = "translate(" + navbarHeader.offsetWidth + "px, 0px)";
         //navbarHeader.parentElement.style.width = (navbarHeader.parentElement.offsetWidth + navbarHeader.offsetWidth) + "px";
         navbarBrand.style.opacity = "0";

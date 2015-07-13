@@ -84,9 +84,15 @@
   }
 
   & > .container {
-    // navbarHeader.offsetWidth
-    transform: translate(-181px, 0px);
-    transition: 1s transform ease-out;
+    @media (min-width: 768px) {
+      // navbarHeader.offsetWidth
+      transform: translate(-181px, 0px);
+      transition: 1s transform ease-out;
+    }
+
+    @media (max-width: 767px) {
+      transform: translate(0, 0) !important;
+    }    
   }
 
   .navbar-nav{
@@ -111,9 +117,11 @@
     }
   }
   
-  .navbar-right {
-    transform: translate(181px, 0px);
-    transition: 1s transform ease-out;
+  @media (min-width: 768px) {
+    .navbar-right {
+      transform: translate(181px, 0px);
+      transition: 1s transform ease-out;
+    }    
   }
 
 }
@@ -131,11 +139,6 @@
   }
 }
 @media (max-width: 992px) {
-  .navbar-home .navbar-nav li {
-    &.twitter,&.facebook,&.instagram{
-      display: none;
-    }
-  }   
   .footer-top .links li {
       margin: 0;
       display: block;

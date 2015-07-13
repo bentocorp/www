@@ -266,7 +266,7 @@ hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #c2c9cc;
 }
 .sr-only {
   position: absolute;
@@ -305,7 +305,7 @@ h6,
   font-family: inherit;
   font-weight: 500;
   line-height: 1.1;
-  color: inherit;
+  color: #565859;
 }
 h1 small,
 h2 small,
@@ -383,7 +383,7 @@ h6 .small,
 }
 h1,
 .h1 {
-  font-size: 36px;
+  font-size: 21px;
 }
 h2,
 .h2 {
@@ -407,6 +407,9 @@ h6,
 }
 p {
   margin: 0 0 10px;
+  font-size: 16px;
+  line-height: 1.8em;
+  color: #999;
 }
 .lead {
   margin-bottom: 20px;
@@ -1664,7 +1667,7 @@ output {
   padding-top: 7px;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #555;
+  color: #565859;
 }
 .form-control {
   display: block;
@@ -1673,7 +1676,7 @@ output {
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #555;
+  color: #565859;
   background-color: #fff;
   background-image: none;
   border: 1px solid #ccc;
@@ -2888,7 +2891,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   font-size: 14px;
   font-weight: normal;
   line-height: 1;
-  color: #555;
+  color: #565859;
   text-align: center;
   background-color: #ccc;
   border: 1px solid #ccc;
@@ -6298,7 +6301,7 @@ button.list-group-item-danger.active:focus {
           transition: color .15s;
 }
 .hero-home button:hover {
-  color: #555;
+  color: #565859;
   background: #fff;
 }
 .steps-list {
@@ -6333,15 +6336,6 @@ button.list-group-item-danger.active:focus {
   font-size: 12px;
   font-weight: normal;
   letter-spacing: .1em;
-}
-.steps-list .step h1 {
-  font-size: 21px;
-  color: #555;
-}
-.steps-list .step p {
-  font-size: 16px;
-  line-height: 1.8em;
-  color: #999;
 }
 .photos {
   margin-top: 100px;
@@ -6533,6 +6527,9 @@ button.list-group-item-danger.active:focus {
   font-size: 15px;
   color: #999;
 }
+.newsletter h2 {
+  color: #999;
+}
 @media (max-width: 992px) {
   .newsletter {
     width: 100%;
@@ -6554,7 +6551,7 @@ button.list-group-item-danger.active:focus {
 .newsletter .newsletter-email input[type=email] {
   width: 300px;
   padding: 10px 10px;
-  color: #555;
+  color: #565859;
   border: none;
   outline: none;
 }
@@ -6634,6 +6631,20 @@ button.list-group-item-danger.active:focus {
   margin-top: -5px;
   font-size: 90%;
   color: red;
+}
+.features {
+  margin: 100px 0;
+}
+.features .center {
+  text-align: center;
+}
+.features .center .img-circle {
+  display: inline-block;
+  width: 130px;
+  height: 130px;
+  padding: 25px;
+  border: 2px solid #95ca61;
+  border-radius: 130px;
 }
 @media (max-width: 500px) {
   .navbar-home .navbar-nav li {

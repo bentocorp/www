@@ -411,17 +411,6 @@
         letter-spacing: .1em;
       }
     }
-
-    h1 {
-      font-size: 21px;
-      color: @gray;
-    }
-
-    p {
-      font-size: 16px;
-      line-height: 1.8em;
-      color: @gray-light;
-    }
   }
 }
 
@@ -607,6 +596,7 @@
 }
 .newsletter{
   color: @gray-light;
+  h2 { color: @gray-light; }
   margin: 50px 0;
   font-size: 15px;
 
@@ -711,6 +701,21 @@
     margin-top: -5px;
     font-size: 90%;
 
+  }
+}
+
+.features {
+  margin: 100px 0;
+  .center {
+    text-align: center;
+    .img-circle {
+      height: 130px;
+      width: 130px;
+      border: 2px solid @green;
+      border-radius: 130px;
+      padding: 25px;
+      display: inline-block;
+    }
   }
 }
 

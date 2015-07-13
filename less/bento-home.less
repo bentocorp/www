@@ -433,21 +433,36 @@
     margin-top: 25px;
   }
 
-  .photo {
+  [class*="photo-"] {
     float: left;
-
-    img {
-      width: 100%;
-    }
+    img { width: 100%; }
   }
 
-  .photo-large {
+  [class*="photo-large-"] {
     width: 50%;
+    margin-bottom: 4px;
   }
 
-  .photo-small {
+  [class*="photo-small-"] {
     width: 25%;
   }
+  
+  [class$="-left"] {
+    transform: translateX(-2px);
+  }
+
+  [class$="-right"] {
+    transform: translateX(2px);
+  }
+
+  [class$="-left-left"] {
+    transform: translateX(-6px);
+  }
+
+  [class$="-right-right"] {
+    transform: translateX(6px);
+  }
+
 }
 
 .footer {

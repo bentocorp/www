@@ -6367,17 +6367,42 @@ button.list-group-item-danger.active:focus {
     margin-top: 25px;
   }
 }
-.photos .photo {
+.photos [class*="photo-"] {
   float: left;
 }
-.photos .photo img {
+.photos [class*="photo-"] img {
   width: 100%;
 }
-.photos .photo-large {
+.photos [class*="photo-large-"] {
   width: 50%;
+  margin-bottom: 4px;
 }
-.photos .photo-small {
+.photos [class*="photo-small-"] {
   width: 25%;
+}
+.photos [class$="-left"] {
+  -webkit-transform: translateX(-2px);
+      -ms-transform: translateX(-2px);
+       -o-transform: translateX(-2px);
+          transform: translateX(-2px);
+}
+.photos [class$="-right"] {
+  -webkit-transform: translateX(2px);
+      -ms-transform: translateX(2px);
+       -o-transform: translateX(2px);
+          transform: translateX(2px);
+}
+.photos [class$="-left-left"] {
+  -webkit-transform: translateX(-6px);
+      -ms-transform: translateX(-6px);
+       -o-transform: translateX(-6px);
+          transform: translateX(-6px);
+}
+.photos [class$="-right-right"] {
+  -webkit-transform: translateX(6px);
+      -ms-transform: translateX(6px);
+       -o-transform: translateX(6px);
+          transform: translateX(6px);
 }
 .footer .footer-top {
   padding: 20px 0;

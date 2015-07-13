@@ -95,14 +95,92 @@
     }    
   }
 
+  #nav-scroll-spy > .navbar-nav {
+    @media (min-width: 1200px) {
+      width: 48%;
+    }
+    
+    @media (max-width: 1199px) {
+      width: 80%;
+    }
+    
+    //@media (max-width: 767px) {
+    //  width: 100%;
+    //}
+  }
+  
+  
+
   .navbar-nav{
     list-style: none;
     margin: 0;
     padding: 0;
 
     li {
+      display: inline-block;
+      //margin: 0 20px;
+      padding: 10px 0;
+      width: 25%;
+      text-align: center;
+
+      &:first-child {
+        margin-left: 0;
+      }
+      
+      &:nth-child(1) {
+        //background-color: burlywood;
+        &:hover ~ hr { margin-left: 0% !important; }
+        &.active ~ hr { margin-left: 0%; }  
+      }
+      
+      &:nth-child(2) {
+        //background-color: aquamarine;
+        &:hover ~ hr { margin-left: 25% !important; }
+        &.active ~ hr { margin-left: 25%; }  
+      }
+      
+      &:nth-child(3) {
+        //background-color: seagreen;
+        &:hover ~ hr { margin-left: 50% !important; }
+        &.active ~ hr { margin-left: 50%; }  
+      }
+      
+      &:nth-child(4) {
+        //background-color: cornflowerblue;
+        &:hover ~ hr { margin-left: 75% !important; }
+        &.active ~ hr { margin-left: 75%; }  
+      }
+      
+      &.navlink a {
+        padding: 1px 0;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: .2em;
+
+        &:hover {
+          color: #fff;
+        }
+
+      }
+
+      &.active {
+
+        a {
+          color: #fff;
+          background: none;
+          border-color: #fff;
+        }
+      }
+    }
+    
+    &.navbar-right li {
+      width: inherit;
       .medialinks;
     }
+    
+    
   }
 
   // nav logo
@@ -113,7 +191,14 @@
       & > img.logo {
         height: 100%;
         width: inherit;
+        @media (max-width: 1199px) {
+          width: 100px;
+        }
       }
+    }
+    @media (max-width: 767px) {
+      //width: 100px;
+      display: none;
     }
   }
   
@@ -122,6 +207,15 @@
       transform: translate(181px, 0px);
       transition: 1s transform ease-out;
     }    
+  }
+
+  hr {
+    height: .25rem;
+    width: 25%;
+    background-color: white;
+    margin: 0;
+    border: none;
+    transition: .3s ease-in-out;
   }
 
 }

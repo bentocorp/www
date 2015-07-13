@@ -427,14 +427,18 @@
       a {
         padding-bottom: 5px;
         color: #fff;
-        border-bottom: 1px solid;
-        border-color: transparent;
-        transition: border-color .15s;
+
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: transparent;
+
+        transition: .15s border-color;
 
         &:hover {
-          text-decoration: none;
+          color: #fff;
           border-color: #fff;
         }
+
       }
     }
   }

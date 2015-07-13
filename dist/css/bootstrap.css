@@ -6365,14 +6365,15 @@ button.list-group-item-danger.active:focus {
 .footer .footer-nav li a {
   padding-bottom: 5px;
   color: #fff;
-  border-color: transparent;
-  border-bottom: 1px solid;
-  -webkit-transition: border-color .15s;
-       -o-transition: border-color .15s;
-          transition: border-color .15s;
+  border-bottom-color: transparent;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  -webkit-transition: .15s border-color;
+       -o-transition: .15s border-color;
+          transition: .15s border-color;
 }
 .footer .footer-nav li a:hover {
-  text-decoration: none;
+  color: #fff;
   border-color: #fff;
 }
 .delivery {

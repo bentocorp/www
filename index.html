@@ -33,11 +33,11 @@
     
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#nav-scroll-spy">
   <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=1425633981076740&amp;ev=PixelInitialized" /></noscript>
   <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6026847103468&amp;cd[value]=0.00&amp;cd[currency]=USD&amp;noscript=1" /></noscript>
 
-    <section class="page-hero">
+    <section class="page-hero" id="home">
         <nav class="navbar navbar-home navbar-static" id="sticky-controls">
             <div class="container">
                 <div class="navbar-header">
@@ -45,16 +45,18 @@
                     <img src="/img/bento-logo-white.svg" alt="Bento Logo" class="logo">                    
                   </a>
                 </div>
-                <ul class="nav navbar-nav">
-                    <li class="active navlink"><a href="/">Home</a></li>
-                    <li class="navlink"><a href="/#service">Delivery Locations</a></li>
-                    <li class="navlink"><a href="/#about">About</a></li>
-                    <li class="navlink visible-lg-block visible-md-block">
-                      <a href="https://bnc.lt/l/5tN62DU_SU">Download Now</a>
-                      <!-- ><a href="https://itunes.apple.com/us/app/bento-asian-food-delivered/id963634117?ls=1&mt=8">IOS</a> -->
-                      <!-- <a href="https://play.google.com/store/apps/details?id=com.bentonow.bentonow">Android</a> -->
-                    </li>
-                </ul>
+                <div id="nav-scroll-spy">
+                  <ul class="nav navbar-nav">
+                      <li class="active navlink"><a href="#home">Home</a></li>
+                      <li class="navlink"><a href="#service">Delivery Locations</a></li>
+                      <li class="navlink"><a href="#about">About</a></li>
+                      <li class="navlink visible-lg-block visible-md-block">
+                        <a href="https://bnc.lt/l/5tN62DU_SU">Download Now</a>
+                        <!-- ><a href="https://itunes.apple.com/us/app/bento-asian-food-delivered/id963634117?ls=1&mt=8">IOS</a> -->
+                        <!-- <a href="https://play.google.com/store/apps/details?id=com.bentonow.bentonow">Android</a> -->
+                      </li>
+                  </ul>
+                </div>
                 <ul class="nav navbar-nav navbar-right visible-lg-block">
                   <li class="twitter">
                       <a href="https://twitter.com/bento" class="twitter-follow-button" data-show-count="false">Follow @bento</a>
@@ -142,7 +144,8 @@
             <img src="/img/photo-small-4.jpg" alt="Photo of Bento">
         </div>
     </section>
-    <section class="delivery">
+
+    <section class="delivery" id="service">
         <div class="delivery-bar">
             <div class="delivery-bar-content"> 
                 <div class="delivery-car"></div><div class="delivery-text">Now delivering to...</div>
@@ -150,7 +153,8 @@
         </div>    
         <div class="delivery-map" id="delivery-map"></div>
     </section>
-     <section class="newsletter">
+
+    <section class="newsletter" id="subscribe">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 center">

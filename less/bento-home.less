@@ -1,3 +1,9 @@
+// translate introduces incorrect horizontal scrolling
+// remove by preventing overflow-x entirely
+html, body {
+  overflow-x: hidden;
+}
+
 // Custom Styles - Home
 .medialinks{
   display: inline-block;
@@ -418,6 +424,7 @@
 
 .photos {
   margin-top: 100px;
+  overflow: hidden;
   .clearfix();
 
   @media (max-width: 992px) {
@@ -547,6 +554,7 @@
 }
 
 .delivery {
+  overflow: hidden;
 
   .delivery-bar {
     font-size: 24px;
@@ -588,6 +596,9 @@
   .center {
     float: none;
     margin: 0 auto;
+  }
+
+  .center-text {
     text-align: center;
   }
 
@@ -634,17 +645,20 @@
   .newsletter-menusubscribe{
     white-space: nowrap;
     width: 400px;
+    @media (max-width: 1200px) {
+      width: 380px;
+    }
+    @media (max-width: 992px) {
+      width: 355px;
+    }
+    @media (max-width: 500px) {
+      width: 253px;
+    }
     padding-right: 10px;
     line-height: 18px;
     vertical-align: middle;
-    margin: 0 auto;
-    
     @media (max-width: 992px) {
-      .center-block();
-
-    }
-    @media (max-width: 500px) {
-      max-width: 80%;
+      margin: 0 auto;
     }
   }
 

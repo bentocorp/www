@@ -1,0 +1,51 @@
+section.page-hero#home
+  nav.navbar.navbar-home.navbar-static#sticky-controls
+    .container
+      .navbar-header
+        a.navbar-brand(href="/")
+          img.logo(src="./img/bento-logo-white.svg", alt="Bento Logo")
+      #nav-scroll-spy
+        ul.nav.navbar-nav
+          li.navlink
+            a(href="#home") Home
+          li.navlink
+            // Delivery Locations
+            a(href="#service") Locations
+          li.navlink
+            a(href="#about") About
+          li.navlink.hidden-xs
+            // Download Now / Download: iOS Android 
+            a(href=branchDownloadAppURL) Download
+            // a(href=appStoreURL) IOS
+            // a(href=googlePlayURL) Android
+          hr
+      ul.nav.navbar-nav.navbar-right.visible-lg-block
+        li.twitter
+          +twitter-button
+        li.facebook
+          +facebook-button
+        li.instagram
+          +instagram-button
+
+  .hero.hero-home
+    .container
+      .hero-left
+        img.logo(src="./img/bento-logo-white.svg", alt="Bento Logo")
+        h1
+          | Delicious Asian food delivered in minutes.
+          br
+          | Build your Bento for only $12.
+          .app-store-btn
+            a.btn.btn-default.btn-download(href=appStoreURL) Download in App Store
+            a.btn.btn-default.btn-download(href=googlePlayURL) Download on Google Play
+        form.form-phone
+          .linkTexting_oq3j39q0
+            .linkTextingInner_oq3j39q0
+              .input-group
+                input.linkTextingInput_oq3j39q0.form-control.bfh-phone.span1#numberToText_linkTexting_oq3j39q0_5e87fc24-49d5-4321-8dd7-b239e516b843(type="tel", data-format="+1 (ddd) ddd-dddd")
+                span.input-group-btn
+                  button.linkTextingButton_oq3j39q0.btn#sendButton_linkTexting_oq3j39q0_5e87fc24-49d5-4321-8dd7-b239e516b843(type="button", onclick="sendLink_linkTexting_oq3j39q0('5e87fc24-49d5-4321-8dd7-b239e516b843')")
+                    | Text download link
+              .linkTextingError_oq3j39q0#linkTextingError_oq3j39q0_5e87fc24-49d5-4321-8dd7-b239e516b843(style="display:none;")
+      .hero-right
+        .bento-screenshots

@@ -1,0 +1,33 @@
+footer.footer
+  .footer-top
+    .container
+      img.logo(src="./img/bento-logo-white.svg", alt="Bento Logo", width="200")
+      .links
+        ul
+          li.twitter
+            +twitter-button
+          li.facebook
+            +facebook-button
+          li.instagram
+            +instagram-button
+          li
+            a(href=appStoreURL)
+              img.app-button(src="./img/app-store-button.png", alt="Download from App Store")
+          li
+            a(href=googlePlayURL)
+              img.app-button(src="./img/en_app_rgb_wo_60.png", alt="Download from Google Play")
+  .footer-bottom
+    .container
+      .copyright &copy; Bento
+      ul.footer-nav
+        li
+          a(href="#home") Home
+        li
+          a(href="https://cdn.bentonow.com/legal/terms.htm") Terms &amp; Conditions
+        li.navlink
+          a(href=branchDownloadAppURL) DOWNLOAD: 
+          a(href=appStoreURL) IOS 
+          a(href=googlePlayURL) Android
+        li 415.300.1332
+        li
+          a(href="mailto:help@bentonow.com") help@bentonow.com

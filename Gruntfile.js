@@ -332,17 +332,15 @@ module.exports = function (grunt) {
     },
 
     jade: {
-      options: {
-        pretty: true,
-        data: getLessVarsData
-      },
-      customizerVars: {
-        src: 'docs/_jade/customizer-variables.jade',
-        dest: 'docs/_includes/customizer-variables.html'
-      },
-      customizerNav: {
-        src: 'docs/_jade/customizer-nav.jade',
-        dest: 'docs/_includes/nav/customize.html'
+      compile: {
+        options: {
+          data: {
+            debug: false
+          }
+        },
+        files: {
+          "dist/index.html": ["jade/index.jade"]
+        }
       }
     },
 
@@ -369,6 +367,10 @@ module.exports = function (grunt) {
       less: {
         files: 'less/**/*.less',
         tasks: 'less'
+      },
+      jade: {
+        files: 'jade/*.jade',
+        tasks: 'jade'
       }
     },
 
@@ -480,7 +482,7 @@ module.exports = function (grunt) {
   grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:core', 'csscomb:dist', 'cssmin:minifyCore']);
 
   // Full distribution task.
-  grunt.registerTask('dist', ['clean:dist', 'dist-css', 'copy:fonts', 'dist-js']);
+  grunt.registerTask('dist', ['clean:dist', 'jade', 'dist-css', 'copy:fonts', 'dist-js']);
 
   // Default task.
   grunt.registerTask('default', ['clean:dist', 'copy:fonts', 'test']);
@@ -505,6 +507,7 @@ module.exports = function (grunt) {
     var destFilepath = 'dist/js/npm.js';
     generateCommonJSModule(grunt, srcFiles, destFilepath);
   });
+
 
   // Docs task.
   grunt.registerTask('docs-css', ['autoprefixer:docs', 'autoprefixer:examples', 'csscomb:docs', 'csscomb:examples', 'cssmin:docs']);

@@ -6435,7 +6435,8 @@ body {
   max-width: 342px;
 }
 .page-hero {
-  background-image: url(/img/plates-bg.jpg);
+  background-color: #95ca61;
+  background-image: url(../img/plates-bg.jpg);
   -webkit-background-size: cover;
           background-size: cover;
 }
@@ -6523,7 +6524,7 @@ body {
   right: 0;
   width: 469px;
   height: 625px;
-  background-image: url(/img/bento-screenshots.png);
+  background-image: url(../img/bento-screenshots.png);
   -webkit-background-size: contain;
           background-size: contain;
 }

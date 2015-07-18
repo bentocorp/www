@@ -287,6 +287,11 @@ module.exports = function (grunt) {
           '**/*'
         ],
         dest: 'docs/dist/'
+      },
+      img: {
+        expand: true,
+        src: 'img/*',
+        dest: 'dist/'
       }
     },
 
@@ -482,7 +487,7 @@ module.exports = function (grunt) {
   grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:core', 'csscomb:dist', 'cssmin:minifyCore']);
 
   // Full distribution task.
-  grunt.registerTask('dist', ['clean:dist', 'jade', 'dist-css', 'copy:fonts', 'dist-js']);
+  grunt.registerTask('dist', ['clean:dist', 'jade', 'dist-css', 'dist-js', 'copy:img']);
 
   // Default task.
   grunt.registerTask('default', ['clean:dist', 'copy:fonts', 'test']);
@@ -492,8 +497,10 @@ module.exports = function (grunt) {
   // This can be overzealous, so its changes should always be manually reviewed!
   grunt.registerTask('change-version-number', 'sed');
 
+  /*
   grunt.registerTask('build-glyphicons-data', function () { generateGlyphiconsData.call(this, grunt); });
 
+  
   // task for building customizer
   grunt.registerTask('build-customizer', ['build-customizer-html', 'build-raw-files']);
   grunt.registerTask('build-customizer-html', 'jade');
@@ -501,6 +508,7 @@ module.exports = function (grunt) {
     var banner = grunt.template.process('<%= banner %>');
     generateRawFiles(grunt, banner);
   });
+  */
 
   grunt.registerTask('commonjs', 'Generate CommonJS entrypoint module in dist dir.', function () {
     var srcFiles = grunt.config.get('concat.bootstrap.src');
@@ -508,13 +516,14 @@ module.exports = function (grunt) {
     generateCommonJSModule(grunt, srcFiles, destFilepath);
   });
 
-
+  /*
   // Docs task.
   grunt.registerTask('docs-css', ['autoprefixer:docs', 'autoprefixer:examples', 'csscomb:docs', 'csscomb:examples', 'cssmin:docs']);
   grunt.registerTask('lint-docs-css', ['csslint:docs', 'csslint:examples']);
   grunt.registerTask('docs-js', ['uglify:docsJs', 'uglify:customize']);
   grunt.registerTask('lint-docs-js', ['jshint:assets', 'jscs:assets']);
   grunt.registerTask('docs', ['docs-css', 'lint-docs-css', 'docs-js', 'lint-docs-js', 'clean:docs', 'copy:docs', 'build-glyphicons-data', 'build-customizer']);
+  */
 
   grunt.registerTask('prep-release', ['dist', 'docs', 'jekyll:github', 'htmlmin', 'compress']);
 

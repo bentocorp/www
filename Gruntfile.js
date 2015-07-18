@@ -292,6 +292,10 @@ module.exports = function (grunt) {
         expand: true,
         src: 'img/*',
         dest: 'dist/'
+      },
+      favicon: {
+        src: 'favicon.ico',
+        dest: 'dist/'
       }
     },
 
@@ -487,7 +491,7 @@ module.exports = function (grunt) {
   grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:core', 'csscomb:dist', 'cssmin:minifyCore']);
 
   // Full distribution task.
-  grunt.registerTask('dist', ['clean:dist', 'jade', 'dist-css', 'dist-js', 'copy:img']);
+  grunt.registerTask('dist', ['clean:dist', 'jade', 'dist-css', 'dist-js', 'copy:img', 'copy:favicon']);
 
   // Default task.
   grunt.registerTask('default', ['clean:dist', 'copy:fonts', 'test']);

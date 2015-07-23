@@ -7,27 +7,8 @@ html, body {
 }
 
 @import "bento-navbar.less";
+@import "bento-footer.less";
 
-
-.footer-top {
-
-  .links{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    li {
-      .medialinks();
-    }
-  }
-}
-
-@media (max-width: 992px) {
-  .footer-top .links li {
-      margin: 0;
-      display: block;
-  }   
-}
 
 .logo {
   max-width: 342px;
@@ -245,96 +226,6 @@ html, body {
     transform: translateX(6px);
   }
 
-}
-
-.footer {
-
-  .footer-top {
-    padding: 20px 0;
-    background: @green;
-
-    .logo {
-      float: left;
-      max-width: 200px;
-      margin-top: 4px;
-
-      @media (max-width: 992px) {
-        margin-top: 8px;
-        max-width: 96px;
-      }
-    }
-
-    .links {
-      float: right;
-
-      .app-button {
-        max-width: 160px;
-      }
-    }
-  }
-
-  .footer-bottom {
-    padding: 20px 0;
-    background: @green-dark;
-
-    @media (max-width: 992px) {
-      text-align: center;
-    }
-  }
-
-  .copyright {
-    float: left;
-    color: #fff;
-    opacity: .5;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-
-    @media (max-width: 992px) {
-      width: 100%;
-    }
-  }
-
-  .footer-nav {
-    list-style: none;
-    float: right;
-    margin-bottom: 0;
-
-    @media (max-width: 992px) {
-      display: none;
-    }
-
-    li {
-      display: inline-block;
-      margin: 0 20px;
-      color: #fff;
-      font-size: 12px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: .2em;
-
-      &:last-child {
-        margin-right: 0;
-      }
-
-      a {
-        text-decoration: none;
-        padding-bottom: 5px;
-        color: #fff;
-
-        border-bottom-width: 1px;
-        border-bottom-style: solid;
-        border-bottom-color: transparent;
-
-        transition: .15s border-color;
-
-        &:hover {
-          color: #fff;
-          border-color: #fff;
-        }
-
-      }
-    }
-  }
 }
 
 .delivery {

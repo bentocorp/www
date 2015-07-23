@@ -611,7 +611,7 @@ var Bento = (function () {
         controls.classList.remove('navbar-static');
         // magic number to keep the page from "jumping"
         // when transitioning between static and fixed
-        placeholder.style.height = "170px";
+        placeholder.style.height = "175px";
         controls.classList.add('navbar-fixed-top');
         
         if (st > lastScrollTop) {

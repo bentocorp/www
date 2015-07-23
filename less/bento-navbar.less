@@ -20,12 +20,12 @@
     @media (min-width: 768px) {
       // animate left
       transform: translateX(-@navbar-brand-width);
-      transition: 1s transform ease-out;
+      transition: 0.5s transform ease-out;
 
       // animate right to make it look like navbar-right doesn't move
       .navbar-right {
         transform: translateX(@navbar-brand-width);
-        transition: 1s transform ease-out;
+        transition: 0.5s transform ease-out;
       }
 
     }
@@ -122,8 +122,11 @@
     & > a.navbar-brand {
       height: @navbar-brand-height;
       width: @navbar-brand-width;
+      @media (min-width: @screen-sm) and (max-width: @screen-sm-max) {
+        width: (@navbar-brand-width - 15);
+      }
       opacity: 0;
-      transition: 1s opacity ease-out;
+      transition: 0.5s opacity ease-out;
       & > img.logo {
         height: 100%;
         width: 100%;

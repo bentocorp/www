@@ -6980,16 +6980,24 @@ body {
   overflow: hidden;
 }
 .delivery .delivery-bar {
-  height: 75px;
-  font-size: 24px;
-  line-height: 75px;
-  color: white;
+  height: 48px;
+  font-size: 18px;
+  color: #fff;
   text-align: center;
   background-color: #78a74b;
-  border-top: 4px solid white;
+  border-top: 4px solid #fff;
 }
-.delivery .delivery-bar img {
-  padding-right: 33px;
+.delivery .delivery-bar .inner {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.delivery .delivery-bar .inner img {
+  height: 18px;
+  padding-right: 13px;
 }
 .delivery .delivery-map {
   display: block;

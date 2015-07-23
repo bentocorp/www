@@ -2,15 +2,18 @@
   overflow: hidden;
 
   .delivery-bar {
-    font-size: 24px;
-    color: white;
+    font-size: 18px;
+    color: @white;
     background-color: @green-dark;
-    height: 75px;
-    line-height: 75px;
+    height: (@navbar-height + 4); // include border to make green section should equal to @navbar-height
     text-align: center;
-    border-top: 4px solid white;
-    img {
-      padding-right: 33px;
+    border-top: 4px solid @white;
+    .inner {
+      .vertical-align-middle();
+      img {
+        padding-right: 13px;
+        height: 18px;
+      }
     }
   }
 

@@ -38,6 +38,14 @@
   &:nth-child(@{counter}) { .slide-hr-active-hover(@nav-item-margin, @nav-item-width, @counter); }
 }
 
+//mixin:
+// vertical-align: middle that actually works (if parent height is set)
+.vertical-align-middle() {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 // mixin:
 // social media link styles
 .medialinks() {

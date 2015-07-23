@@ -1,21 +1,23 @@
 footer.footer
   .footer-top
     .container
-      img.logo(src="./img/bento-logo-white.svg", alt="Bento Logo", width="200")
-      .links
-        ul
-          li.twitter
-            +twitter-button
-          li.facebook
-            +facebook-button
-          li.instagram
-            +instagram-button
-          li
-            a(href=appStoreURL)
-              img.app-button(src="./img/app-store-button.png", alt="Download from App Store")
-          li
-            a(href=googlePlayURL)
-              img.app-button(src="./img/en_app_rgb_wo_60.png", alt="Download from Google Play")
+      ul.pull-left
+        li
+          img(src="./img/bento-logo-white.svg", alt="Bento", width="200")
+      ul.pull-right
+        li
+          a(href=appStoreURL)
+            img.app-button(src="./img/app-store-button.png", alt="Download from App Store")
+        li
+          a(href=googlePlayURL)
+            img.app-button(src="./img/en_app_rgb_wo_60.png", alt="Download from Google Play")
+      ul.pull-right
+        li.twitter
+          +twitter-button
+        li.facebook
+          +facebook-button
+        li.instagram
+          +instagram-button
   .footer-bottom
     .container
       .copyright &copy; Bento

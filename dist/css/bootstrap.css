@@ -6788,6 +6788,24 @@ body {
   letter-spacing: .1em;
   border: none;
 }
+.hero-home .hero-left .btn-download + .btn-download {
+  margin-left: 20px;
+}
+@media (max-width: 768px) {
+  .hero-home .hero-left .btn-download {
+    display: block;
+    max-width: 400px;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-left: auto;
+  }
+  .hero-home .hero-left .btn-download + .btn-download {
+    margin-bottom: 50px;
+    margin-left: auto;
+  }
+}
 .hero-home .hero-left .form-phone {
   max-width: 480px;
   margin-bottom: 50px;

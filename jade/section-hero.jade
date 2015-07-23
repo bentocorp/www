@@ -9,9 +9,13 @@ section.page-hero#home
           | Delicious Asian food delivered in minutes.
           br
           | Build your Bento for only $12.
-          .app-store-btn
-            a.btn.btn-default.btn-download(href=appStoreURL) Download in App Store
-            a.btn.btn-default.btn-download(href=googlePlayURL) Download on Google Play
+
+        
+        a.btn.btn-default.btn-download.hidden-md.hidden-lg(href=appStoreURL)
+          | Download in App Store
+        a.btn.btn-default.btn-download.hidden-md.hidden-lg(href=googlePlayURL)
+          | Download on Google Play
+
         form.form-phone
           .linkTexting_oq3j39q0
             .linkTextingInner_oq3j39q0
@@ -21,5 +25,5 @@ section.page-hero#home
                   button.linkTextingButton_oq3j39q0.btn#sendButton_linkTexting_oq3j39q0_5e87fc24-49d5-4321-8dd7-b239e516b843(type="button", onclick="sendLink_linkTexting_oq3j39q0('5e87fc24-49d5-4321-8dd7-b239e516b843')")
                     | Text download link
               .linkTextingError_oq3j39q0#linkTextingError_oq3j39q0_5e87fc24-49d5-4321-8dd7-b239e516b843(style="display:none;")
-      .hero-right
+      .hero-right.hidden-xs.hidden-sm
         .bento-screenshots

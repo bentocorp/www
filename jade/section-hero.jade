@@ -1,31 +1,5 @@
 section.page-hero#home
-  nav.navbar.navbar-home.navbar-static#sticky-controls
-    .container
-      .navbar-header
-        a.navbar-brand(href="/")
-          img.logo(src="./img/bento-logo-white.svg", alt="Bento Logo")
-      #nav-scroll-spy
-        ul.nav.navbar-nav
-          li.navlink
-            a(href="#home") Home
-          li.navlink
-            // Delivery Locations
-            a(href="#service") Locations
-          li.navlink
-            a(href="#about") About
-          li.navlink.hidden-xs
-            // Download Now / Download: iOS Android 
-            a(href=branchDownloadAppURL) Download
-            // a(href=appStoreURL) IOS
-            // a(href=googlePlayURL) Android
-          hr
-      ul.nav.navbar-nav.navbar-right.visible-lg-block
-        li.twitter
-          +twitter-button
-        li.facebook
-          +facebook-button
-        li.instagram
-          +instagram-button
+  include navbar
 
   .hero.hero-home
     .container

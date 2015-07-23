@@ -118,29 +118,27 @@ var Bento = (function () {
     var navbarRight = document.querySelector('.navbar-right');
     //navbarHeader.offsetWidth;
 
+    var navCollapse = window.jQuery('#nav-collapse');
+
     // fix controls if placeholder (original controls location) is not in viewport
     fixControls = function(){
       if(!placeholder || !controls) return;
       var st = window.pageYOffset || document.documentElement.scrollTop;
 
       if(isInViewport(logo)){
-        // navbarHeader.offsetWidth has unexpected behavior for small screens
-        navbarHeader.parentElement.style.transform = "translate(-181px, 0px)";
-        navbarRight.style.transform = "translate(" + navbarHeader.offsetWidth + "px, 0px)";
-        //navbarHeader.parentElement.style.width = (navbarHeader.parentElement.offsetWidth + navbarHeader.offsetWidth) + "px";
+        navbarHeader.parentElement.style.transform = "translateX(-"+ navbarHeader.offsetWidth + "px)";
+        navbarRight.style.transform = "translateX(" + navbarHeader.offsetWidth + "px)";
         navbarBrand.style.opacity = "0";
         setTimeout(function(){
           navbarBrand.style.visibility = "hidden";
         },1000);
       } else {
-        //navbarHeader.parentElement.style.width = "";
-        navbarHeader.parentElement.style.transform = "translate(0px, 0px)";
-        navbarRight.style.transform = "translate(0px, 0px)";
+        navbarHeader.parentElement.style.transform = "translateX(0px)";
+        navbarRight.style.transform = "translateX(0px)";
         navbarBrand.style.opacity = "1";
         navbarBrand.style.visibility = "visible";
       }
 
-      
       if(isInViewport(placeholder)) {
         controls.classList.remove('navbar-fixed-top');
         controls.classList.remove('in');
@@ -154,10 +152,11 @@ var Bento = (function () {
         controls.classList.add('navbar-fixed-top');
         
         if (st > lastScrollTop) {
-          // downscroll code
+          // scroll down code
           controls.classList.remove('in');
+          navCollapse.collapse('hide');
         } else {
-          // upscroll code
+          // scroll up code
           controls.classList.add('in');
         }
 

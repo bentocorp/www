@@ -1,0 +1,48 @@
+.about {
+  margin: 100px 0;
+  h1 { 
+    color: @green-dark;
+    margin-top: 60px;
+    @media (max-width: 992px) {
+      margin-top: 10px;
+    }
+  }
+
+  .photo-set {
+    .clearfix();
+
+    max-width: 468px; // 473 - 5 (from translateX)
+    max-height: 313px;
+
+    img { 
+      width: 100%;
+
+      &.left {
+        float: left;
+        max-width: 234px;
+        width: 50%;
+      }
+
+      &.right {
+        float: right;
+        max-width: 234px;
+        width: 50%;
+
+        transform: translateX(5px);
+        overflow: hidden;
+  
+        &:last-of-type {
+          border-top: 5px solid white;
+        }
+      }
+    } //.img
+
+  } // .photo-set
+
+  .row {
+    @media (min-width: 922px) {
+      margin-bottom: 100px;    
+    }
+  }
+
+}

@@ -6709,6 +6709,7 @@ body {
 }
 .footer .copyright {
   float: left;
+  line-height: 36px;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: .1em;

@@ -1,11 +1,21 @@
 .about {
-  margin: 100px 0;
+  hr {
+    margin-top: 100px;
+  }
+
+  .row {
+    margin-bottom: 100px;
+  }
+
   h1 { 
     color: @green-dark;
-    margin-top: 60px;
-    @media (max-width: 992px) {
-      margin-top: 10px;
-    }
+    margin-top: 0;
+  }
+
+  ul {
+    font-size: 16px;
+    line-height: 1.8em;
+    color: @gray-light;
   }
 
   .photo-set {
@@ -37,12 +47,14 @@
       }
     } //.img
 
+    @media (max-width: @screen-md-max) {
+      margin: 0 auto 10px;
+    }
+
   } // .photo-set
 
-  .row {
-    @media (min-width: 922px) {
-      margin-bottom: 100px;    
-    }
+  .photo-caption {
+    //.vertical-align-middle();
   }
 
 }

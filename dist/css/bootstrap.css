@@ -7170,17 +7170,23 @@ body {
 .features [class*="col-"] {
   margin-top: 100px;
 }
-.about {
-  margin: 100px 0;
+.features p {
+  margin: 0;
+}
+.about hr {
+  margin-top: 100px;
+}
+.about .row {
+  margin-bottom: 100px;
 }
 .about h1 {
-  margin-top: 60px;
+  margin-top: 0;
   color: #78a74b;
 }
-@media (max-width: 992px) {
-  .about h1 {
-    margin-top: 10px;
-  }
+.about ul {
+  font-size: 16px;
+  line-height: 1.8em;
+  color: #999;
 }
 .about .photo-set {
   max-width: 468px;
@@ -7223,9 +7229,9 @@ body {
 .about .photo-set img.right:last-of-type {
   border-top: 5px solid white;
 }
-@media (min-width: 922px) {
-  .about .row {
-    margin-bottom: 100px;
+@media (max-width: 1199px) {
+  .about .photo-set {
+    margin: 0 auto 10px;
   }
 }
 .linkTextingInner_oq3j39q0 {

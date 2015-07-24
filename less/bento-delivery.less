@@ -22,9 +22,12 @@
     .img-responsive();
     
     height: 500px;
-    @media (min-width: 1440px) {
+    @media (min-width: @screen-lg) {
       height:700px;
       
+    }
+    @media (max-width: @screen-xs-max) {
+      margin: 0 (@grid-gutter-width / 2);
     }
   }
 

@@ -7011,9 +7011,14 @@ body {
   height: auto;
   height: 500px;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
   .delivery .delivery-map {
     height: 700px;
+  }
+}
+@media (max-width: 767px) {
+  .delivery .delivery-map {
+    margin: 0 15px;
   }
 }
 .newsletter {

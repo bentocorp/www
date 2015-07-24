@@ -5,7 +5,8 @@
     font-size: 18px;
     color: @white;
     background-color: @green-dark;
-    height: (@navbar-height + 4); // include border to make green section should equal to @navbar-height
+    // include border and padding to make green section equal the nav's height
+    height: (@navbar-height + 4 + (@nav-item-padding * 2));
     text-align: center;
     border-top: 4px solid @white;
     .inner {

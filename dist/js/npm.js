@@ -2,4 +2,5 @@
 require('../../js/transition.js')
 require('../../js/collapse.js')
 require('../../js/scrollspy.js')
+require('../../js/bootstrap-formhelpers.js')
 require('../../js/main.js')

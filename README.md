@@ -1,3 +1,5 @@
+#*work in progress*
+
 # [Bento](https://bentonow.com)
 
 A fork of [Bootstrap](http://getbootstrap.com).
@@ -76,6 +78,11 @@ www/
 - checkout dev branch
 - switch out minified css and js
 - grunt dist, watch, less, ... other commands ...
+
+### Jade
+**TODO**
+- HTML templating
+- grunt jade
 
 ### Styles
 **TODO**

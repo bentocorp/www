@@ -73,10 +73,32 @@ $(document).ready(function() {
 
 /* jshint ignore:end */
 
-/* jshint devel: true */
 var Bento = (function () {
   "use strict";
-  var fixControls, isInViewport, stickyControls, lastScrollTop = 0;
+  var cfg, isInViewport, errorIfNotExists, stickyControls,
+      init, fixControls, lastScrollTop = 0;
+
+    // !!! HEADS UP
+    // This code is not written to support more than one element that 
+    // matches a query selector. Only the first element matched is used.
+
+  // init default config
+  cfg = {
+    stickyControls: '#sticky-controls',
+    stickyControlsPlaceholder: '#sticky-controls-placeholder',
+    logo: '.hero.hero-home .logo',
+    navbarHeader: '.navbar-header',
+    navbarBrand: '.navbar-header .navbar-brand',
+    navbarRight: '.navbar-right',
+    navCollapse: '#nav-collapse',
+    slideLeftClass: 'slide-left',
+    slideRightClass: 'slide-right',
+    slideZeroClass: 'slide-zero',
+    navbarFixedClass: 'navbar-fixed-top',
+    navbarStaticClass: 'navbar-static',
+    navbarInClass: 'in'
+  };
+
 
   // returns true/false
   // elem: dom element e.g. returned by document.getElementById
@@ -91,97 +113,152 @@ var Bento = (function () {
     );
   };
 
+  // throw an error if an element does not exist
+  errorIfNotExists = function(elem, param) {
+    if(!elem) throw(param + ' DOES NOT EXIST!');
+  }
+
   // TODO pass in config vars - remove hardcoded: 
-  // sticky-controls, sticky-controls-placeholder, .her.hero-home .logo
-  // TODO throw error if sticky-controls selector returns anything other than 1 element
+  // .her.hero-home .logo
 
-  /* enable sticky footer controls - use id="sticky-controls" */
+
+  // enable sticky footer controls - default id="sticky-controls"
   stickyControls = function(){
-    var controls = document.getElementById('sticky-controls');
-    if(!controls) return;
+    var controls, controlsComputedStyle, controlsTotalMargin, placeholder,
+        logo, navbarHeader, navbarBrand, navbarRight, jqNavCollapse;
 
-    // get computed styles
-    var controlsComputedStyle = window.getComputedStyle(controls);
-    var controlsTotalMargin = 
-          parseInt(controlsComputedStyle.marginTop, 10) + 
+    controls = document.querySelector(cfg.stickyControls);
+    errorIfNotExists(controls, cfg.stickyControlsId);
+
+    // get computed styles (margins)
+    controlsComputedStyle = window.getComputedStyle(controls);
+    controlsTotalMargin = 
+          parseInt(controlsComputedStyle.marginTop, 10) +
           parseInt(controlsComputedStyle.marginBottom, 10);
 
-
     // get or create placeholder
-    var placeholder = document.getElementById('sticky-controls-placeholder');
+    placeholder = document.querySelector(cfg.stickyControlsPlaceholder);
     if(!placeholder) {
       placeholder = document.createElement("DIV");
       placeholder.id = "sticky-controls-placeholder";
       controls.parentElement.insertBefore(placeholder, controls.nextSibling);
     }
+    // placeholder must clear floats
     placeholder.style.clear = "both";
 
-    /* jshint debug: true */
-    //debugger;
+    logo = document.querySelector(cfg.logo);
+    errorIfNotExists(logo, cfg.logo);
 
-    var logo = document.querySelector('.hero.hero-home .logo');
-    var navbarHeader = document.querySelector('.navbar-header');
-    var navbarBrand = document.querySelector('.navbar-header .navbar-brand');
-    var navbarRight = document.querySelector('.navbar-right');
-    //navbarHeader.offsetWidth;
+    navbarHeader = document.querySelector(cfg.navbarHeader);
+    errorIfNotExists(navbarHeader, cfg.navbarHeader);
 
-    var navCollapse = window.jQuery('#nav-collapse');
+    navbarBrand = document.querySelector(cfg.navbarBrand);
+    errorIfNotExists(navbarBrand, cfg.navbarBrand);
 
-    // fix controls if placeholder (original controls location) is not in viewport
+    navbarRight = document.querySelector(cfg.navbarRight);
+    errorIfNotExists(navbarRight, cfg.navbarRight);
+
+    // mobile nav uses Bootstrap's jQuery powered Collapse
+    if(window.jQuery) {
+      jqNavCollapse = window.jQuery(cfg.navCollapse);
+      errorIfNotExists(jqNavCollapse, cfg.navCollapse);
+
+      // check for collapse plugin
+      if(typeof jqNavCollapse.collapse !== "function") {
+        // dummy fn to keep the code from breaking if jQuery isn't available
+        jqNavCollapse = { collapse: function(){return;} };
+      }
+    } else {
+      // dummy fn to keep the code from breaking if jQuery isn't available
+      jqNavCollapse = { collapse: function(){return;} };
+    }
+
+    // fix controls if placeholder (original controls location)
+    // is not in viewport
     fixControls = function(){
       if(!placeholder || !controls) return;
+
+      // get scroll position
       var st = window.pageYOffset || document.documentElement.scrollTop;
 
+      // main logo is visible, hide navbar logo
       if(isInViewport(logo)){
-        navbarHeader.parentElement.classList.add('slide-left');
-        navbarRight.classList.add('slide-right');
+        // reset
+        navbarHeader.parentElement.classList.remove(cfg.slideZeroClass);
+        navbarRight.classList.remove(cfg.slideZeroClass);
 
-        navbarHeader.parentElement.classList.remove('slide-zero');
-        navbarRight.classList.remove('slide-zero');
+        // slide navbar left
+        navbarHeader.parentElement.classList.add(cfg.slideLeftClass);
 
+        // slide right nav right - gives the appearance that this doesn't move
+        navbarRight.classList.add(cfg.slideRightClass);
+
+        // fade out logo
         navbarBrand.style.opacity = "0";
+
+        // hide logo shortly after opacity has reached zero
+        // this prevents the user from clicking on an invisible logo
         setTimeout(function(){
           navbarBrand.style.visibility = "hidden";
-        },1000);
+        },600);
+
+      // main logo is not visible, show navbar logo
       } else {
-        navbarHeader.parentElement.classList.remove('slide-left');
-        navbarRight.classList.remove('slide-right');
+        // reset
+        navbarHeader.parentElement.classList.remove(cfg.slideLeftClass);
+        navbarRight.classList.remove(cfg.slideRightClass);
 
-        navbarHeader.parentElement.classList.add('slide-zero');
-        navbarRight.classList.add('slide-zero');
+        // slide navbars back into place
+        navbarHeader.parentElement.classList.add(cfg.slideZeroClass);
+        navbarRight.classList.add(cfg.slideZeroClass);
 
-        navbarBrand.style.opacity = "1";
+        // made logo visible and fade logo in
         navbarBrand.style.visibility = "visible";
+        navbarBrand.style.opacity = "1";
       }
 
+      // original nav location is visible, swap fixed nav for static nav
       if(isInViewport(placeholder)) {
-        controls.classList.remove('navbar-fixed-top');
-        controls.classList.remove('in');
-        controls.classList.add('navbar-static');
+        // reset
+        controls.classList.remove(cfg.navbarFixedClass);
+        controls.classList.remove(cfg.navbarInClass);
+
+        // reset placeholder
         placeholder.style.height = "0";
+
+        // make controls static
+        controls.classList.add(cfg.navbarStaticClass);
+
+      // original nav is not visible, swap static for fixed
       } else {
-        controls.classList.remove('navbar-static');
-        // compute height of navbar - offsetHeight (actual height + padding) +
-        // top and bottom margins
+
+        // reset
+        controls.classList.remove(cfg.navbarStaticClass);
+
+        // keep the page from jumping - set placeholder height to original
+        // nav height (including margin)
         placeholder.style.height = (controls.offsetHeight + controlsTotalMargin) + "px";
 
-        controls.classList.add('navbar-fixed-top');
-        
+        // make controls fixed
+        controls.classList.add(cfg.navbarFixedClass);
+
         if (st > lastScrollTop) {
-          // scroll down code
-          controls.classList.remove('in');
-          navCollapse.collapse('hide');
+          // scroll down: show nav
+          controls.classList.remove(cfg.navbarInClass);
         } else {
-          // scroll up code
-          controls.classList.add('in');
+          // scroll up: hide nav
+          controls.classList.add(cfg.navbarInClass);
         }
 
       }
       // update to detect direction
       lastScrollTop = st;
+
+      // hide collapse menu if the page was scrolled either direction
+      jqNavCollapse.collapse('hide');
     };
 
-    // run on init
+    // run immediately
     fixControls();
 
     // run after scrolling
@@ -190,26 +267,34 @@ var Bento = (function () {
     // run after resizing
     //window.onresize = fixControls;
   };
-
-  var refreshStickyControls = function(){
-    if(fixControls && typeof fixControls === "function") fixControls();
-  };
   
-  var init = function() {
+  init = function(config) {
+
+    // overwrite default cfg with passed in config
+    if(config !== undefined){
+      for(var prop in config){
+        if(config[prop] !== undefined){ cfg[prop] = config[prop]; }
+      }
+    }
+
     // sticky navbar
     stickyControls();
   };
   
   // export public properties and methods
   return {
-    init: init,
-    refreshStickyControls: refreshStickyControls
+    init: init
   }
 })();
 
-// init
+// self-exec init method
 !function(){
   "use strict";
+
+  // call init method
+  // you may pass in a config object to override defaults
+  // e.g. Bento.init({stickyControls: '#my-sticky-controls'});
+  // see default config above for available parameters
   Bento.init();
 }();
 

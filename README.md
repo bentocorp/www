@@ -124,7 +124,7 @@ Some core Bootstrap files have been modified, however most modifications are to 
 
 The main css file for this project is `bootstrap.less`. Order matters! You must define variables and mixins before using them (higher up in the file).
 
-`grunt less` can be used to compile LESS into CSS. `grunt dist-css` will compile, autoprefix, and comb and minify your CSS. `grunt watch` and `grunt dist` call `dist-css`.
+`grunt less` can be used to compile LESS into CSS. `grunt dist-css` will compile, autoprefix, comb and minify your CSS. `grunt watch` and `grunt dist` call `dist-css`.
 
 ### JavaScript
 `js/main.js` contains custom JavaScript.
@@ -151,7 +151,7 @@ Images are copied from `img` into `dist/img`. Do not put images directly in `dis
 The favicon is an exception. It is located directly in the project root and is copied into `dist` by `grunt dist` and `grunt copy:favicon`. The watcher will not automatically copy the favicon.
 
 ## Upgrading Bootstrap
-Before you upgrade Bootstrap, ask yourself "why am I doing this?" If you answer is "because a new version is available", **do not** continue. If, however, you have encountered a bug or need a few feature, then you might consider upgrading Bootstrap. 
+Before you upgrade Bootstrap, ask yourself "why am I doing this?" If you answer is "because a new version is available", **do not** continue. If, however, you have encountered a bug or need a new feature, then you might consider upgrading Bootstrap. 
 
 Always review the [change log](https://github.com/twbs/bootstrap/releases) before upgrading.
 
@@ -191,7 +191,7 @@ $ git merge twb/v3.3.5
 
 **EXPECT CONFLICTS**
 
-Several files and folders have been removed, including:
+Files and folders have been removed, including:
 
 ```
 .travis.yml
@@ -208,26 +208,25 @@ package.js
 test-infra/
 ```
 
-Several files have been changed, including:
+Files have been changed, including:
 
 ```
 Gruntfile.js
 less/variables.less
 ```
 
-Many files have been added, including;
+Files have been added, including;
 ```
 jade/
-less/bento-*
-less/variables
+less/bento-*.less
 js/main.js
 ```
 
-After performing the merge, while still in a conflicted state, use `git rm -r` to remove unwanted files and folders.
+After performing the merge, while still in a conflicted state, use `git rm -r <file>` to remove unwanted files and folders.
 
-To prefer the local version of an entire file, use `git checkout --ours`. This is useful for files like `README.md` which exist in upstream, but are completely changed in this project.
+To prefer the local version of an entire file, use `git checkout --ours <file>`. This is useful for files like `README.md` which exist in upstream, but are completely changed in this project.
 
-To prefer the remote version of an entire file, use `git checkout --theirs`. This may be useful if a bugfix was applied to a file prior to that fix being in an official release.
+To prefer the remote version of an entire file, use `git checkout --theirs <file>`. This may be useful if a bugfix was applied to a file prior to that fix being in an official release.
 
 To keep some local and some remote changes, you will need to manually edit conclicting files. In a conflicting file, you will see something like this:
 
@@ -239,4 +238,10 @@ Goodbye
 >>>>>>> [git hash]:file.txt
 ```
 
-Where `Hello world`, the content above the `=======`, are local changes from `dev` (or the branch you merged Bootstrap into). The content below the `=======`, in this case `Goodbye`, is from the other commit - in this case upstream Bootstrap.
+Where `Hello world`, the content above the `=======`, are local changes from `dev` (or the branch you merged Bootstrap into). The content below the `=======`, in this case `Goodbye`, is from the other commit - in this case upstream Bootstrap. Remove the marker lines added by git as well as the code which you do not which to keep. Add the file with `git add <file>`.
+
+Once all conflicts have been resolved, commit and push.
+```sh
+$ git commit -m "upgraded Bootstrap"
+$ git push origin dev
+```

@@ -6393,6 +6393,24 @@ body {
 .navbar-home.in {
   top: 0;
 }
+.navbar-home .slide-zero {
+  -webkit-transform: translateX(0) !important;
+      -ms-transform: translateX(0) !important;
+       -o-transform: translateX(0) !important;
+          transform: translateX(0) !important;
+}
+.navbar-home .slide-right {
+  -webkit-transform: translateX(177px) !important;
+      -ms-transform: translateX(177px) !important;
+       -o-transform: translateX(177px) !important;
+          transform: translateX(177px) !important;
+}
+.navbar-home .slide-left {
+  -webkit-transform: translateX(-177px) !important;
+      -ms-transform: translateX(-177px) !important;
+       -o-transform: translateX(-177px) !important;
+          transform: translateX(-177px) !important;
+}
 @media (min-width: 768px) {
   .navbar-home > .container {
     -webkit-transition: .5s -webkit-transform ease-out;

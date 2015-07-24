@@ -17,6 +17,18 @@
     top: 0;
   }
 
+  .slide-zero {
+    transform: translateX(0) !important;
+  }
+
+  .slide-right {
+    transform: translateX(@navbar-brand-width) !important;
+  }
+
+  .slide-left {
+    transform: translateX(-@navbar-brand-width) !important;
+  }
+
   & > .container {
     @media (min-width: @screen-sm) {
       // animate left

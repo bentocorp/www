@@ -133,15 +133,23 @@ var Bento = (function () {
       var st = window.pageYOffset || document.documentElement.scrollTop;
 
       if(isInViewport(logo)){
-        navbarHeader.parentElement.style.transform = "translateX(-"+ navbarHeader.offsetWidth + "px)";
-        navbarRight.style.transform = "translateX(" + navbarHeader.offsetWidth + "px)";
+        navbarHeader.parentElement.classList.add('slide-left');
+        navbarRight.classList.add('slide-right');
+
+        navbarHeader.parentElement.classList.remove('slide-zero');
+        navbarRight.classList.remove('slide-zero');
+
         navbarBrand.style.opacity = "0";
         setTimeout(function(){
           navbarBrand.style.visibility = "hidden";
         },1000);
       } else {
-        navbarHeader.parentElement.style.transform = "translateX(0px)";
-        navbarRight.style.transform = "translateX(0px)";
+        navbarHeader.parentElement.classList.remove('slide-left');
+        navbarRight.classList.remove('slide-right');
+
+        navbarHeader.parentElement.classList.add('slide-zero');
+        navbarRight.classList.add('slide-zero');
+
         navbarBrand.style.opacity = "1";
         navbarBrand.style.visibility = "visible";
       }

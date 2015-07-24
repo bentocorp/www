@@ -563,6 +563,13 @@ var Bento = (function () {
     var controls = document.getElementById('sticky-controls');
     if(!controls) return;
 
+    // get computed styles
+    var controlsComputedStyle = window.getComputedStyle(controls);
+    var controlsTotalMargin = 
+          parseInt(controlsComputedStyle.marginTop, 10) + 
+          parseInt(controlsComputedStyle.marginBottom, 10);
+
+
     // get or create placeholder
     var placeholder = document.getElementById('sticky-controls-placeholder');
     if(!placeholder) {
@@ -609,9 +616,10 @@ var Bento = (function () {
         placeholder.style.height = "0";
       } else {
         controls.classList.remove('navbar-static');
-        // magic number to keep the page from "jumping"
-        // when transitioning between static and fixed
-        placeholder.style.height = "175px";
+        // compute height of navbar - offsetHeight (actual height + padding) +
+        // top and bottom margins
+        placeholder.style.height = (controls.offsetHeight + controlsTotalMargin) + "px";
+
         controls.classList.add('navbar-fixed-top');
         
         if (st > lastScrollTop) {

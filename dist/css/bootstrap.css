@@ -7156,16 +7156,19 @@ body {
   font-size: 90%;
   color: red;
 }
-.features .center {
+.features {
   text-align: center;
 }
-.features .center .img-circle {
+.features .img-circle {
   display: inline-block;
   width: 130px;
   height: 130px;
   padding: 25px;
   border: 2px solid #95ca61;
   border-radius: 130px;
+}
+.features [class*="col-"] {
+  margin-top: 100px;
 }
 .about {
   margin: 100px 0;

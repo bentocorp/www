@@ -364,7 +364,7 @@ module.exports = function (grunt) {
       },
       less: {
         files: 'less/**/*.less',
-        tasks: 'less'
+        tasks: 'dist-css'
       },
       jade: {
         files: 'jade/*.jade',

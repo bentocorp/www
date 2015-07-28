@@ -3,6 +3,7 @@ lock '3.3.5'
 
 set :application, 'bento-www'
 set :repo_url, 'git@github.com:bentocorp/www.git'
+set :repo_tree, 'dist' # relative path to project root in repo
 
 # Set up a strategy to deploy only a project directory (not the whole repo)
 #set :git_strategy, RemoteCacheWithProjectRootStrategy
@@ -16,8 +17,6 @@ set :deploy_to, '/var/www/bento-www/deploy'
 
 components_dir = '/var/www/bento-www/components'
 set :components_dir, components_dir
-
-set :deploy_subdir, "www/dist"
 
 
 # Default value for :scm is :git

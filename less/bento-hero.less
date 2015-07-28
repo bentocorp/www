@@ -1,0 +1,152 @@
+.page-hero {
+  background-image: url(../img/plates-bg.jpg);
+  background-size: cover;
+  background-color: @green;
+}
+
+.hero-home {
+  padding: 100px 0 100px;
+
+  @media (max-width: @screen-md) {
+    padding: 25px 0 0;
+  }
+
+  .hero-left {
+    float: left;
+    width: 50%;
+
+    @media (max-width: @screen-md) {
+      width: 100%;
+      text-align: center;
+    }
+
+    .logo {
+      margin-bottom: 50px;
+      max-width: 342px;
+      width: 100%;
+
+      @media (max-width: @screen-xs-max) {
+        max-width: 240px;
+        margin-bottom: 25px;
+      }
+    }
+
+    h1 {
+      margin: 0 0 50px;
+      font-size: 21px;
+      font-weight: normal;
+      line-height: 1.8em;
+      color: #fff;
+
+      @media (max-width: @screen-xs-max) {
+        font-size: 16px;
+        margin-bottom: 25px;
+      }
+    }
+
+    .btn-download {
+      padding: 12px 32px;
+      margin-bottom: 50px;
+      font-size: 16px;
+      font-weight: 600;
+      color: @green-dark;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      border: none;
+      text-decoration: none;
+
+      & + .btn-download {
+        margin-left: 20px;
+      }
+
+      @media (max-width: @screen-sm) {
+        display: block;
+        max-width: 400px;
+        margin-bottom: 20px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 0;
+        padding-left: 0;
+        font-size: 14px;
+        & + .btn-download {
+          margin-left: auto;
+          margin-bottom: 50px;
+        }
+      }
+
+    }
+
+
+    .form-phone {
+      max-width: 480px;
+      margin-bottom: 50px;
+
+      @media (max-width: @screen-md) {
+        display: none;
+      }
+    }
+  }
+
+  .hero-right {
+    float: right;
+    width: 50%;
+    position: relative;
+
+    .bento-screenshots {
+      position: absolute;
+      top: -40px;
+      right: 0;
+      height: 625px;
+      width: 469px;
+
+      background-size: contain;
+
+      // @1x
+      background-image: url(../img/bento-screenshots@1x.png);
+      // @2x
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        background-image: url(../img/bento-screenshots@2x.png);
+      }
+    }
+
+  }
+
+  input {
+    padding: 21px 12px;
+    color: @gray-light;
+    font-size: 16px;
+    border: none;
+    border-right: 1px solid @green;
+    z-index: 1;
+    box-shadow: 0px 0px 18px rgba(0,0,0,0);
+    transition: .15s box-shadow;
+
+    &:focus {
+      outline: none;
+      -webkit-appearance: none;
+      box-shadow: 0px 0px 18px rgba(0,0,0,.3);
+      border-right: 1px solid @green;
+    }
+  }
+
+  button {
+    height: auto;
+    width: auto;
+    padding: 14px 24px;
+    background: #fff;
+    color: @green-dark;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    line-height: 1em;
+    border-left: 1px solid @green;
+    transition: color .15s;
+    z-index: 2;
+
+    &:hover {
+      background: #fff;
+      color: @gray;
+    }
+  }
+}

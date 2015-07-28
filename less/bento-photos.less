@@ -1,0 +1,40 @@
+.photos {
+  margin-top: 100px;
+  overflow: hidden;
+  .clearfix();
+
+  @media (max-width: 992px) {
+    margin-top: 25px;
+  }
+
+  [class*="photo-"] {
+    float: left;
+    img { width: 100%; }
+  }
+
+  [class*="photo-large-"] {
+    width: 50%;
+    margin-bottom: 4px;
+  }
+
+  [class*="photo-small-"] {
+    width: 25%;
+  }
+  
+  [class$="-left"] {
+    transform: translateX(-2px);
+  }
+
+  [class$="-right"] {
+    transform: translateX(2px);
+  }
+
+  [class$="-left-left"] {
+    transform: translateX(-6px);
+  }
+
+  [class$="-right-right"] {
+    transform: translateX(6px);
+  }
+
+}

@@ -1,0 +1,163 @@
+.navbar-home {
+  top: -@nav-animation-offset;
+  background-color: @green-dark;
+  padding: @nav-item-padding 0;
+  transition: top @nav-animation-speed @nav-animation-timing-fn, 
+              background-color @nav-animation-speed @nav-animation-timing-fn;
+
+  &.navbar-static {
+    transform: translateY(@nav-animation-offset);
+    background-color: transparent;
+    // avoid jumping - disable the top transition when navbar-static is toggled
+    transition: top 0s,
+                background-color @nav-animation-speed @nav-animation-timing-fn;
+  }
+  
+  &.in {
+    top: 0;
+  }
+
+  .slide-zero {
+    transform: translateX(0) !important;
+  }
+
+  .slide-right {
+    transform: translateX(@navbar-brand-width) !important;
+  }
+
+  .slide-left {
+    transform: translateX(-@navbar-brand-width) !important;
+  }
+
+  & > .container {
+    @media (min-width: @screen-sm) {
+      // animate left
+      transform: translateX(-@navbar-brand-width);
+      transition: @nav-animation-speed transform @nav-animation-timing-fn;
+
+      // animate right to make it look like navbar-right doesn't move
+      .navbar-right {
+        transform: translateX(@navbar-brand-width);
+        transition: @nav-animation-speed transform @nav-animation-timing-fn;
+      }
+
+    }
+
+    @media (max-width: @screen-xs-max) {
+      transform: translateX(0) !important;
+    }
+  }
+
+  #nav-scroll-spy > .navbar-nav {
+    @media (min-width: @screen-sm) {
+      width: (@nav-item-count * (@nav-item-width + (@nav-item-margin * 2)));
+    }
+  }
+
+  @media (max-width: @screen-xs-max) {
+    #nav-collapse {
+      position: fixed;
+      left: 0;
+      right: 0;
+      margin-top: @nav-item-padding;
+    }
+  }
+
+  ul.navbar-nav {
+    list-style: none;
+    margin: 0;
+
+    // horizontal nav for everything except mobile
+    @media (min-width: @screen-sm) {
+      padding: 0;
+
+      // nav items must be the same width for the sliding underline hr to work
+      li {
+        display: inline-block;
+        margin: 0 @nav-item-margin;
+        padding: @nav-item-padding 0;
+        width: @nav-item-width;
+        text-align: center;
+
+        // align the left most element flush left
+        &:first-child { margin-left: 0; }
+
+        // create styles for sliding underline hr
+        .slide-hr-factory(@nav-item-count);
+
+        &.navlink {
+          // default nav styles
+          .navlink-a();
+        }
+
+      }
+
+      // hr used as sliding underline
+      hr {
+        height: .25rem;
+        width: @nav-item-width;
+        background-color: @white;
+        margin: 0;
+        border: none;
+        transition: @nav-hr-speed @nav-hr-timing-fn;
+        
+        // required for ff
+        position: absolute;
+        bottom: 0;
+      }
+    }
+
+    // hamburger button menu nav on mobile
+    @media (max-width: @screen-xs-max) {
+      background-color: @green;
+
+      li.navlink { 
+        padding: 10px 20px;
+        border-left: .3rem solid transparent;
+
+        // default nav styles
+        .navlink-a();
+
+        // highlight active with horizontal bar
+        &.active {
+          border-left-color: @white;
+        }
+      }
+
+      // hide sliding underline hr
+      hr { display: none; }
+    }
+
+    &.navbar-right li {
+      width: inherit;
+      .medialinks();
+    }
+
+  }
+
+  .navbar-header {
+    // nav logo
+    & > a.navbar-brand {
+      height: @navbar-brand-height;
+      width: @navbar-brand-width;
+      // shrink logo a bit to fit the full menu on small screens
+      @media (min-width: @screen-sm) and (max-width: @screen-sm-max) {
+        width: (@navbar-brand-width - (@grid-gutter-width / 2));
+      }
+      opacity: 0;
+      transition: @nav-animation-speed opacity @nav-animation-timing-fn;
+      & > img.logo {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    // hamburger button
+    .navbar-toggle {
+      border-color: @white;
+      .icon-bar {
+        background-color: @white;
+      }
+    }
+  }
+
+}

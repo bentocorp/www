@@ -1,0 +1,98 @@
+// mixin:
+// main navigation link style
+.navlink-a() {
+  a {
+    padding: 0;
+    color: @white;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    text-decoration: none;
+
+    &:hover {
+      color: @white;
+      background-color: transparent;
+    }
+  }
+}
+
+// mixin:
+// calc offset to slide the hr for a given child
+.slide-hr(@margin, @width, @nth-child) {
+  margin-left: ((@margin * (@nth-child - 1) * 2) + (@width * (@nth-child - 1)));
+}
+
+// mixin:
+// apply offset to hr if li has class .active or if li has state :hover
+// use !important to prefer :hover over .active
+.slide-hr-active-hover(@margin, @width, @nth-child) {
+  &:hover ~ hr { .slide-hr(@margin, @width, @nth-child) !important; }
+  &.active ~ hr { .slide-hr(@margin, @width, @nth-child); }
+}
+
+// mixin:
+// define loop to generate offsets for each item
+.slide-hr-factory(@counter) when (@counter > 0) {
+  .slide-hr-factory((@counter - 1));
+  &:nth-child(@{counter}) { .slide-hr-active-hover(@nav-item-margin, @nav-item-width, @counter); }
+}
+
+//mixin:
+// vertical-align: middle that actually works (if parent height is set)
+.vertical-align-middle() {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// mixin:
+// social media link styles
+.medialinks() {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px 0;
+
+  .medialinks-height() {
+    // .navbar-nav > li > a line-height + top padding
+    // + bottom padding + bottom border
+    height: (@line-height-computed + (@nav-item-padding * 2) + 1);
+  }
+
+  &.twitter {
+    .medialinks-height();
+    iframe[id*="twitter-widget"] {
+      vertical-align: middle;
+    }
+  }
+
+  &.facebook {
+    .medialinks-height();
+    min-width: 83px;
+    .fb_iframe_widget {
+      vertical-align: middle;
+    }
+  }
+
+  &.instagram {
+    .medialinks-height();
+    a[class*="ig-b-"] {
+      padding: 0;
+      zoom: 0.867;
+      vertical-align: middle;
+    }
+  }
+  
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &.navlink { .navlink-a(); }
+  &.active {
+    a {
+      color: @white;
+      background: none;
+      border-color: @white;
+    }
+  }
+}

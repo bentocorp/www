@@ -1,0 +1,40 @@
+footer.footer
+  .footer-top
+    .container
+      ul.pull-left
+        li
+          img(src="./img/bento-logo-white.svg", alt="Bento", width="200")
+      ul.pull-right
+        li
+          a(href=appStoreURL)
+            img.app-button(src="./img/app-store-button.png", alt="Download from App Store")
+        li
+          a(href=googlePlayURL)
+            img.app-button(src="./img/en_app_rgb_wo_60.png", alt="Download from Google Play")
+      ul.pull-right
+        li.twitter
+          +twitter-button
+        li.facebook
+          +facebook-button
+        li.instagram
+          +instagram-button
+  .footer-bottom
+    .container
+      .copyright &copy; Bento
+      ul.footer-nav
+        li
+          a(href="#home") Home
+        li
+          a(href="http://cdn.bentonow.com/legal/terms.htm") Terms
+        li.navlink
+          a(href=branchDownloadAppURL) DOWNLOAD: 
+          a(href=appStoreURL) IOS 
+          a(href=googlePlayURL) Android
+        li
+          a(href="http://blog.bentonow.com") Blog
+        li 415.300.1332
+        li
+          a(href="mailto:help@bentonow.com") help@bentonow.com
+        li
+          a(href="https://mixpanel.com/f/partner")
+            img(src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png", alt="Mobile Analytics")

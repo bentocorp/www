@@ -1,0 +1,10 @@
+mixin twitter-button()
+  a.twitter-follow-button(href="https://twitter.com/bento", data-show-count="false")
+    | Follow @bento
+
+mixin facebook-button()
+  .fb-like(data-href="https://www.facebook.com/bento/", data-layout="button_count", data-action="like", data-show-faces="true", data-share="false")
+
+mixin instagram-button()
+  a.ig-b-v-24(href="http://instagram.com/mybentonow?ref=badge", target="_blank")
+    img(src="//badges.instagram.com/static/images/ig-badge-view-24.png", alt="Instagram")

@@ -1,0 +1,97 @@
+.footer {
+
+  @media (max-width: @screen-md) {
+    text-align: center;
+  }
+
+  .footer-top {
+    padding: 20px 0;
+    background: @green;
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      @media (min-width: @screen-md) {
+        height: 76px; // height of app badges (largest element)
+      }
+
+      @media (max-width: @screen-md) {
+        width: 100%;
+        min-height: 76px;
+      }
+
+      li {
+        .medialinks();
+        @media (min-width: @screen-md) {
+          .vertical-align-middle();
+        }
+      }
+    }
+
+    .app-button {
+      max-width: 160px;
+    }
+
+  }
+
+  .footer-bottom {
+    padding: 20px 0;
+    background: @green-dark;
+  }
+
+  .copyright {
+    float: left;
+    color: @white;
+    opacity: .5;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    line-height: 36px; // vertical align middle with mixpanel badge
+
+    @media (max-width: @screen-md) {
+      width: 100%;
+    }
+  }
+
+  .footer-nav {
+    list-style: none;
+    float: right;
+    margin-bottom: 0;
+
+    @media (max-width: @screen-lg) {
+      display: none;
+    }
+
+    li {
+      display: inline-block;
+      margin: 0 20px;
+      color: @white;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .2em;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        text-decoration: none;
+        padding-bottom: 5px;
+        color: @white;
+
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: transparent;
+
+        transition: .15s border-color;
+
+        &:hover {
+          color: @white;
+          border-color: @white;
+        }
+
+      }
+    }
+  }
+}

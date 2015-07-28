@@ -163,7 +163,8 @@
 
 .navbar-brand {
   float: left;
-  padding: @navbar-padding-vertical @navbar-padding-horizontal;
+  padding: 0 0 0 @navbar-padding-horizontal;
+  margin-right: 40px;
   font-size: @font-size-large;
   line-height: @line-height-computed;
   height: @navbar-height;
@@ -183,6 +184,14 @@
       margin-left: -@navbar-padding-horizontal;
     }
   }
+
+  @media (max-width: @screen-xs-max) {
+    margin-right: 0;
+  }
+
+  @media (min-width: @screen-sm) and (max-width: @screen-sm-max) {
+    margin-right: 20px;
+  }
 }
 
 
@@ -195,7 +204,7 @@
   position: relative;
   float: right;
   margin-right: @navbar-padding-horizontal;
-  padding: 9px 10px;
+  padding: 8px;
   .navbar-vertical-align(34px);
   background-color: transparent;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214

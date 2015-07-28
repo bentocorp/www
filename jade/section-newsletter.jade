@@ -1,0 +1,27 @@
+section.newsletter#subscribe
+  .container
+    .row
+      .col-md-8.center.center-text
+        h2
+          | Subscribe to our newsletter and we’ll keep you updated of our 
+          | expansion plans and exciting Bento news!
+    .row
+      .col-md-5.center
+        #mc_embed_signup
+          form.validate#mc-embedded-subscribe-form(action="//bentonow.us10.list-manage.com/subscribe/post?u=5d6c169bca0e5658fc47ead8b&amp;id=aea46e8ab8", method="post", name="mc-embedded-subscribe-form", target="_blank", novalidate)
+            #mc_embed_signup_scroll
+              .newsletter-email
+                input.required.email#mce-EMAIL(type="email", name="EMAIL", placeholder="Enter your email...", required="required")
+                input#mc-embedded-subscribe(type="submit", name="subscribe", value="Subscribe")
+              #mce-email-error.error
+
+              .newsletter-menusubscribe
+                .checkbox.checkbox-bento
+                  input(type="checkbox" value="1" name="group[1425][1]", id="mce-group[1425]-1425-0")
+                  label(for="mce-group[1425]-1425-0")
+                    | Also subscribe to the daily menu newsletter to see what 
+                    | we’re cookin’ today!
+            
+            // real people should not fill this in and expect good things - do not remove this or risk form bot signups
+            div(style="position: absolute; left: -5000px;")
+              input(type="text", name="b_5d6c169bca0e5658fc47ead8b_aea46e8ab8", tabindex="-1", value="")

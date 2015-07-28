@@ -1,0 +1,115 @@
+.newsletter{
+  color: @gray-light;
+  background-color: @gray-white;
+  h2 { color: @gray; }
+  padding: 100px 0;
+  font-size: 15px;
+
+  @media (max-width: 992px) {
+    width: 100%;
+    text-align: center;
+  }
+
+  .center {
+    float: none;
+    margin: 0 auto;
+  }
+
+  .center-text {
+    text-align: center;
+  }
+
+  .newsletter-email {
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 3px;
+    border: 1px solid @silver;
+    vertical-align: top;
+    margin: 30px 0 15px 0;
+    padding: 0;
+    display: inline-block;
+  
+     input[type=email]{
+        width: 300px;
+        border: none;
+        color: @gray-light;
+        background-color: transparent;
+        outline: none;
+        padding: 10px 10px;
+        @media (max-width: 1200px) {
+          width: 250px;
+        }
+         @media (max-width: 500px) {
+          width: 150px;
+        }
+    }
+    input[type=submit]{
+        border-left: 1px solid @silver;
+        border-top: none;
+        border-right: none;
+        border-bottom: none;
+       
+        background-color: transparent;
+        color: @green;
+        cursor: pointer;
+        width: 100px;
+        outline: none;
+        padding: 10px 10px;
+        text-transform:uppercase;
+    }
+  }
+
+  .newsletter-menusubscribe{
+    white-space: nowrap;
+    width: 400px;
+    @media (max-width: 1200px) {
+      width: 380px;
+    }
+    @media (max-width: 992px) {
+      width: 355px;
+    }
+    @media (max-width: 500px) {
+      width: 253px;
+    }
+    padding-right: 10px;
+    line-height: 18px;
+    vertical-align: middle;
+    @media (max-width: 992px) {
+      margin: 0 auto;
+    }
+  }
+
+  label{
+    display: inline-block;;
+    padding-left: 10px;
+    font-size: 15px;
+    line-height: 1.6em;
+    font-weight: normal;
+    vertical-align: middle;
+    text-align: left;
+    word-wrap: break-word;
+    white-space: normal;
+  }
+
+  span{
+    display: inline-block;;
+    vertical-align: middle;
+    margin-left: 6px;
+  }
+
+  .newsletter-email > button::-moz-focus-inner {
+      border: 0;
+  }
+
+  h2{
+    font-size: 20px;
+    line-height: 1.6em;
+  }
+
+  .error{
+    color: red;
+    margin-top: -5px;
+    font-size: 90%;
+
+  }
+}

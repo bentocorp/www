@@ -1,0 +1,35 @@
+.delivery {
+  overflow: hidden;
+
+  .delivery-bar {
+    font-size: 18px;
+    color: @white;
+    background-color: @green-dark;
+    // include border and padding to make green section equal the nav's height
+    height: (@navbar-height + 4 + (@nav-item-padding * 2));
+    text-align: center;
+    border-top: 4px solid @white;
+    .inner {
+      .vertical-align-middle();
+      img {
+        padding-right: 13px;
+        height: 18px;
+      }
+    }
+  }
+
+  .delivery-map{
+    height: 100%;
+    .img-responsive();
+    
+    height: 500px;
+    @media (min-width: @screen-lg) {
+      height:700px;
+      
+    }
+    @media (max-width: @screen-xs-max) {
+      margin: 0 (@grid-gutter-width / 2);
+    }
+  }
+
+}

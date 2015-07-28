@@ -1,0 +1,28 @@
+mixin step(number)
+  .step-number
+    span Step
+    br
+    =number
+
+section.steps
+  .container
+    .row.steps-list
+      .col-sm-12.col-md-4.step
+        +step("1")
+        h1 Download the App
+        p
+          | Find us in the 
+          a(href=appStoreURL) App Store 
+          | and on 
+          a(href=googlePlayURL) Google Play
+          | .
+
+      .col-sm-12.col-md-4.step
+        +step("2")
+        h1 Pick your main &amp; side dishes
+        p Bento’s dishes are prepared fresh &amp; the options change everyday.
+
+      .col-sm-12.col-md-4.step
+        +step("3")
+        h1 Enter your address. Done!
+        p Delicious, hot food will be delivered to your curbside in just minutes!

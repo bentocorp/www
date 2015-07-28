@@ -17,6 +17,9 @@ set :deploy_to, '/var/www/bento-www/deploy'
 components_dir = '/var/www/bento-www/components'
 set :components_dir, components_dir
 
+set :deploy_subdir, "www/dist"
+
+
 # Default value for :scm is :git
 # set :scm, :git
 

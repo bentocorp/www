@@ -48,8 +48,9 @@
     letter-spacing: .1em;
     line-height: 36px; // vertical align middle with mixpanel badge
 
-    @media (max-width: @screen-md) {
+    @media (max-width: @screen-lg) {
       width: 100%;
+      text-align: center;
     }
   }
 
@@ -57,10 +58,6 @@
     list-style: none;
     float: right;
     margin-bottom: 0;
-
-    @media (max-width: @screen-lg) {
-      display: none;
-    }
 
     li {
       display: inline-block;
@@ -93,5 +90,16 @@
 
       }
     }
+
+    @media (max-width: @screen-lg) {
+      width: 100%;
+      text-align: center;
+      padding: 0;
+      li {
+        margin: 10px 0;
+        width: 100%;
+      }
+    }
+
   }
 }

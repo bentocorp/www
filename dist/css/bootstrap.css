@@ -6723,12 +6723,13 @@ body {
 }
 .footer .footer-nav {
   float: right;
+  padding-left: 0;
   margin-bottom: 0;
   list-style: none;
 }
 .footer .footer-nav li {
   display: inline-block;
-  margin: 0 20px;
+  margin: 0 18px;
   font-size: 12px;
   font-weight: 600;
   color: #fff;

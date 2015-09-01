@@ -6715,24 +6715,21 @@ body {
   letter-spacing: .1em;
   opacity: .5;
 }
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .footer .copyright {
     width: 100%;
+    text-align: center;
   }
 }
 .footer .footer-nav {
   float: right;
+  padding-left: 0;
   margin-bottom: 0;
   list-style: none;
 }
-@media (max-width: 1200px) {
-  .footer .footer-nav {
-    display: none;
-  }
-}
 .footer .footer-nav li {
   display: inline-block;
-  margin: 0 20px;
+  margin: 0 18px;
   font-size: 12px;
   font-weight: 600;
   color: #fff;
@@ -6756,6 +6753,17 @@ body {
 .footer .footer-nav li a:hover {
   color: #fff;
   border-color: #fff;
+}
+@media (max-width: 1200px) {
+  .footer .footer-nav {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+  .footer .footer-nav li {
+    width: 100%;
+    margin: 10px 0;
+  }
 }
 .page-hero {
   background-color: #95ca61;
@@ -7270,4 +7278,4 @@ body {
             background-size: 160px 178px;
   }
 }
-/*# sourceMappingURL=bootstrap.css.map */
+/*# sourceMappingURL=bento.css.map */

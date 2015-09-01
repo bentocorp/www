@@ -1,32 +1,17 @@
 {
-  "name": "bootstrap",
-  "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+  "name": "bento",
+  "description": "A fork of Bootstrap 3.3.5",
   "version": "3.3.5",
-  "keywords": [
-    "css",
-    "less",
-    "mobile-first",
-    "responsive",
-    "front-end",
-    "framework",
-    "web"
-  ],
-  "homepage": "http://getbootstrap.com",
-  "author": "Twitter, Inc.",
-  "scripts": {
-    "test": "grunt test"
-  },
-  "style": "dist/css/bootstrap.css",
+  "style": "dist/css/bento.css",
   "less": "less/bootstrap.less",
   "main": "./dist/js/npm",
   "repository": {
     "type": "git",
-    "url": "https://github.com/twbs/bootstrap.git"
+    "url": "https://github.com/bentocorp/www.git"
   },
   "bugs": {
-    "url": "https://github.com/twbs/bootstrap/issues"
+    "url": "https://github.com/bentocorp/www/issues"
   },
-  "license": "MIT",
   "devDependencies": {
     "btoa": "~1.1.2",
     "glob": "~5.0.5",

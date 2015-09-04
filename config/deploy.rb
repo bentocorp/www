@@ -13,9 +13,9 @@ set :repo_tree, 'dist' # relative path to project root in repo
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
 # Default deploy_to directory is /var/www/my_app
-set :deploy_to, '/var/www/bento-www/deploy'
+set :deploy_to, '/sites/bento-www/deploy'
 
-components_dir = '/var/www/bento-www/components'
+components_dir = '/sites/bento-www/components'
 set :components_dir, components_dir
 
 

@@ -6874,7 +6874,7 @@ body {
 }
 .hero-home input {
   z-index: 1;
-  padding: 21px 12px;
+  height: 42px;
   font-size: 16px;
   color: #999;
   border: none;

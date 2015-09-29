@@ -28803,7 +28803,7 @@ $(document).ready(function() {
 var Bento = (function () {
   "use strict";
   var cfg, isInViewport, errorIfNotExists, stickyControls,
-      init, fixControls, lastScrollTop = 0;
+      init, fixControls, lastScrollTop = 0, linkTexting;
 
     // !!! HEADS UP
     // This code is not written to support more than one element that 
@@ -28994,7 +28994,16 @@ var Bento = (function () {
     // run after resizing
     //window.onresize = fixControls;
   };
-  
+
+  // submit linktexting form
+  linkTexting = function(e){
+    /* globals sendLink_linkTexting_oq3j39q0 */
+    e.preventDefault();
+    if(typeof sendLink_linkTexting_oq3j39q0 === 'function'){
+      sendLink_linkTexting_oq3j39q0('5e87fc24-49d5-4321-8dd7-b239e516b843');
+    }
+  };
+
   init = function(config) {
 
     // overwrite default cfg with passed in config
@@ -29006,8 +29015,11 @@ var Bento = (function () {
 
     // sticky navbar
     stickyControls();
+
+    // attach linktexting submit handler
+    document.forms.linkTexting.onsubmit = linkTexting;
   };
-  
+
   // export public properties and methods
   return {
     init: init

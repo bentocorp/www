@@ -1,6 +1,6 @@
 /*!
  * Bootstrap v3.3.5 ()
- * Copyright 2011-2015 
+ * Copyright 2011-2016 
  * Licensed under the  license
  */
 /* jshint ignore:start */
@@ -28762,8 +28762,8 @@ ga('create', 'UA-61640336-1', 'auto');
 ga('send', 'pageview');
 
 function setupMap(){
-	L.mapbox.accessToken = 'pk.eyJ1IjoidmluY2VudC1iZW50b25vdy1jb20iLCJhIjoiV0p2al9qNCJ9.cKufaBUS30xSk7wXxmGuDg';
-	var map = L.mapbox.map('delivery-map', 'vincent-bentonow-com.m26hh48o', {
+	L.mapbox.accessToken = 'pk.eyJ1IjoiZWF0YmVudG8iLCJhIjoiY2lleHc1YTZ6MDU4bnM2bTAyaWRlZmprOCJ9.pH8VKCIO27iYE5JnyTcNfw';
+	var map = L.mapbox.map('delivery-map', 'eatbento.nhb7l277', {
 	  zoomControl: true
 	}).setView([37.779360, -122.412277], 13);
 	// Disable drag and zoom handlers.

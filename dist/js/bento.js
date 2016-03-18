@@ -28765,7 +28765,7 @@ function setupMap(){
 	L.mapbox.accessToken = 'pk.eyJ1IjoiZWF0YmVudG8iLCJhIjoiY2lleHc1YTZ6MDU4bnM2bTAyaWRlZmprOCJ9.pH8VKCIO27iYE5JnyTcNfw';
 	var map = L.mapbox.map('delivery-map', 'eatbento.nhb7l277', {
 	  zoomControl: true
-	}).setView([37.779360, -122.412277], 13);
+	}).setView([37.811919, -122.355959], 12);
 	// Disable drag and zoom handlers.
 	//map.dragging.disable();
 	map.touchZoom.disable();
